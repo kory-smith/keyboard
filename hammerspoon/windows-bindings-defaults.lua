@@ -25,7 +25,7 @@
 --------------------------------------------------------------------------------
 
 return {
-  modifiers = {'ctrl'},
+  modifiers = {'ctrl', 'alt', 'cmd', 'shift'},
   showHelp  = false,
   trigger   = 's',
   mappings  = {
