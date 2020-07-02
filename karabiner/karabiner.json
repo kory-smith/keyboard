@@ -18,9 +18,9 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Change right option to Hyper (i.e., command+control+option+shift)",
+                                "description": "Change Caps Lock to Hyper (i.e., command+control+option)",
                                 "from": {
-                                    "key_code": "right_option",
+                                    "key_code": "caps_lock",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -29,12 +29,16 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_shift",
+                                        "key_code": "left_control",
                                         "modifiers": [
-                                            "left_control",
                                             "left_option",
                                             "left_command"
                                         ]
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "escape"
                                     }
                                 ],
                                 "type": "basic"
@@ -775,16 +779,7 @@
                 "delay_milliseconds_before_open_device": 1000
             },
             "selected": true,
-            "simple_modifications": [
-                {
-                    "from": {
-                        "key_code": "caps_lock"
-                    },
-                    "to": {
-                        "key_code": "left_control"
-                    }
-                }
-            ],
+            "simple_modifications": [],
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
                 "country_code": 0,
