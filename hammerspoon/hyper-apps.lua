@@ -15,5 +15,4 @@ return {
   { 'f', 'Finder' },            -- "F" for "Finder"
   { 'm', 'Microsoft Outlook' },       -- "M" for "eMail"
   { 'n', 'Microsoft Teams' },             -- "S" for "Slack"
-  -- { 't', 'todoist' },             -- "T" for "Terminal"
 }
