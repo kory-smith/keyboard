@@ -1,5 +1,12 @@
 ## Toward a more useful keyboard
 
+This is my fork of Jason Rudolph's phenominal keyboard repository. I've updated the keybindings in a way that's propbably only useful to me. Still, here are some top-level looks at what I've done to the initial repository:
+
+- Changed <kbd>hyper</kbd> to <kbd>Capslock</kdb> while preserving the "tap for <kbd>esc</kbd> functionality.
+- Updated the "modes" keybindings (e.g. Markdown mode, Windows mode, etc.) to use <kdb>shift</kbd> + <kbd>hyper</kdb>, which I refer to as <kbd>shyper</kdb>.
+
+I still need to go thorugh this Readme and update the way the bindings are referenced, but that's a work in progress.
+
 Steve Losh's [Modern Space Cadet][modern-space-cadet] is an inspiration.
 It opened my eyes to the fact that there's a more useful keyboard hidden inside the vanilla QWERTY package that most of us have tolerated for all these years.
 This repo represents my nascent quest to unleash that more useful keyboard.
