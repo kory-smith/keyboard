@@ -2,7 +2,7 @@
 
 This is my fork of Jason Rudolph's phenominal keyboard repository. I've updated the keybindings in a way that's propbably only useful to me. Still, here are some top-level looks at what I've done to the initial repository:
 
-- Changed <kbd>hyper</kbd> to <kbd>Capslock</kdb> while preserving the "tap for <kbd>esc</kbd> functionality.
+- Changed <kbd>hyper</kbd> to <kbd>Capslock</kbd> while preserving the "tap for <kbd>esc</kbd> functionality.
 - Updated the "modes" keybindings (e.g. Markdown mode, Windows mode, etc.) to use <kdb>shift</kbd> + <kbd>hyper</kdb>, which I refer to as <kbd>shyper</kdb>.
 
 I still need to go thorugh this Readme and update the way the bindings are referenced, but that's a work in progress.
