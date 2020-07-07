@@ -7,6 +7,10 @@ This is my fork of Jason Rudolph's phenominal keyboard repository. I've updated 
 
 I still need to go thorugh this Readme and update the way the bindings are referenced, but that's a work in progress.
 
+#Utility Keybindings:
+<kbd>shyper</kbd> + <kbd>o</kbd>: Copy Outlook URL of currently selected message (in Outlook only).
+<kbd>shyper</kbd> + <kbd>d</kbd>: Dismiss all notifications currently on screen.
+
 Steve Losh's [Modern Space Cadet][modern-space-cadet] is an inspiration.
 It opened my eyes to the fact that there's a more useful keyboard hidden inside the vanilla QWERTY package that most of us have tolerated for all these years.
 This repo represents my nascent quest to unleash that more useful keyboard.
