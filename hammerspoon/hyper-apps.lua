@@ -8,11 +8,11 @@
 return {
   -- { 'a', 'Music' },             -- "A" for "Apple Music"
   { 'b', 'Brave Browser' },             -- "B" for "Browser"
-  { 'c', 'Visual Studio Code' },             -- "C for "Code"
+  { 'e', 'Visual Studio Code' },             -- "E" for "editor"
   {'t', 'Todoist'},
-  -- { 'd', (function() print(type("hey"))}, -- "D" for "Do!" ... or "Done!"
-  -- { 'e', 'Atom' },              -- "E" for "Editor"
+  { 'y', 'YNAB' },            -- "Y" for "YNAB"
+  { 'n', 'Notion' },            -- "n" for "Notebook"
   { 'f', 'Finder' },            -- "F" for "Finder"
   { 'm', 'Microsoft Outlook' },       -- "M" for "eMail"
-  { 'n', 'Microsoft Teams' },             -- "S" for "Slack"
+  { 'c', 'Microsoft Teams' },             -- "c" for "chat"
 }
