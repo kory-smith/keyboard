@@ -32,3 +32,5 @@ on closeNotifications()
 end closeNotifications
 ]])
 end)
+
+hs.hotkey.bind({'ctrl', 'shift', 'cmd', 'alt'}, "l", function() hs.caffeinate.lockScreen() end)
