@@ -13,7 +13,9 @@ return {
   { 'y', 'YNAB' },            -- "Y" for "YNAB"
   { 'n', 'Notion' },            -- "n" for "Notebook"
   { 'f', 'Finder' },            -- "F" for "Finder"
-  { 'm', 'Microsoft Outlook' },       -- "M" for "eMail"
-  { 'c', 'Microsoft Teams' },             -- "c" for "chat"
+  -- { 'm', 'Microsoft Outlook' },       -- "M" for "eMail"
+  -- { 'c', 'Microsoft Teams' },             -- "c" for "chat"
   { 'g', 'Google Chrome' },             -- "g" for "Google"
+  { 'd', 'Dashlane' },             -- "d" for "Dashlane"
+  { 'p', 'Pushbullet' },             -- "p" for "Pushbullet"
 }
