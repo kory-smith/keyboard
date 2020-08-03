@@ -34,3 +34,12 @@ end closeNotifications
 end)
 
 hs.hotkey.bind({'ctrl', 'shift', 'cmd', 'alt'}, "l", function() hs.caffeinate.lockScreen() end)
+
+hs.hotkey.bind({'ctrl', 'shift', 'cmd', 'alt'}, "r", function() hs.osascript.applescript([[
+	tell application "System Events"
+	tell process "NotificationCenter"
+		click menu button 1 of window 1
+	end tell
+end tell
+	]])
+end)
