@@ -17,4 +17,5 @@ return {
   { 'c', 'Microsoft Teams' },             -- "c" for "chat"
   { 'g', 'Google Chrome' },             -- "g" for "Google"
   { 'p', 'Pushbullet' },             -- "g" for "Google"
+  { 'return', 'iTerm' },
 }
