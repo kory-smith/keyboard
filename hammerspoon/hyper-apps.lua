@@ -15,4 +15,5 @@ return {
   { 'g', 'Google Chrome' },             -- "g" for "Google"
   { 'd', 'Dashlane' },             -- "d" for "Dashlane"
   { 'p', 'Pushbullet' },             -- "p" for "Pushbullet"
+  { 'return', 'iTerm' },
 }
