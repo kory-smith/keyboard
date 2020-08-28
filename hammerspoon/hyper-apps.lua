@@ -7,13 +7,14 @@
 
 return {
   { 'b', 'Brave Browser' },             -- "B" for "Browser"
+  { 'c', 'Docker Desktop' },             -- "c" for "Containers"
+  { 'd', 'Dashlane' },             -- "d" for "Dashlane"
   { 'e', 'Visual Studio Code' },             -- "E" for "editor"
-  { 't', 'Todoist'},
-  { 'y', 'YNAB' },            -- "Y" for "YNAB"
-  { 'n', 'Notion' },            -- "n" for "Notebook"
   { 'f', 'Finder' },            -- "F" for "Finder"
   { 'g', 'Google Chrome' },             -- "g" for "Google"
-  { 'd', 'Dashlane' },             -- "d" for "Dashlane"
+  { 'n', 'Notion' },            -- "n" for "Notebook"
   { 'p', 'Pushbullet' },             -- "p" for "Pushbullet"
+  { 't', 'Todoist'},
+  { 'y', 'YNAB' },            -- "Y" for "YNAB"
   { 'return', 'iTerm' },
 }
