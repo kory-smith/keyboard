@@ -14,6 +14,7 @@ return {
   { 'n', 'Notion' },            -- "n" for "Notebook"
   { 'f', 'Finder' },            -- "F" for "Finder"
   { 'm', 'Microsoft Outlook' },       -- "M" for "eMail"
+  { 'o', 'Microsoft OneNote' },       -- "O" for "OneNote"
   { 'c', 'Microsoft Teams' },             -- "c" for "chat"
   { 'g', 'Google Chrome' },             -- "g" for "Google"
   { 'p', 'Pushbullet' },             -- "g" for "Google"
