@@ -7,16 +7,17 @@
 
 return {
   -- { 'a', 'Music' },             -- "A" for "Apple Music"
+  { 'c', 'Microsoft Teams' },             -- "c" for "chat"
   { 'b', 'Brave Browser' },             -- "B" for "Browser"
   { 'e', 'Visual Studio Code' },             -- "E" for "editor"
+  { 'g', 'Google Chrome' },             -- "g" for "Google"
   { 't', 'Todoist'},
   { 'y', 'YNAB' },            -- "Y" for "YNAB"
   { 'n', 'Notion' },            -- "n" for "Notebook"
   { 'f', 'Finder' },            -- "F" for "Finder"
+  { 's', 'Spotify' },            -- "S" for "Spotify"
   { 'm', 'Microsoft Outlook' },       -- "M" for "eMail"
   { 'o', 'Microsoft OneNote' },       -- "O" for "OneNote"
-  { 'c', 'Microsoft Teams' },             -- "c" for "chat"
-  { 'g', 'Google Chrome' },             -- "g" for "Google"
   { 'p', 'Pushbullet' },             -- "g" for "Google"
   { 'return', 'iTerm' },
 }
