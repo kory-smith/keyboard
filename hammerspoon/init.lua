@@ -39,6 +39,7 @@ require('keyboard.markdown')
 require('keyboard.panes')
 require('keyboard.windows')
 require('keyboard.utils')
+require('keyboard.middle-click')
 
 
 
