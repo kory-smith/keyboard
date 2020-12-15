@@ -1,5 +1,4 @@
 -- HANDLE SCROLLING WITH MOUSE BUTTON PRESSED
-io.write("here")
 local scrollMouseButton = 2
 local deferred = false
 
