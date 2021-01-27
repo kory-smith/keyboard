@@ -15,7 +15,8 @@ end tell
 ]])
 end)
 
-hs.hotkey.bind({'ctrl', 'shift', 'cmd', 'alt'}, "d", function() hs.osascript.applescript([[
+-- shyper + c will clear all notifications
+hs.hotkey.bind({'ctrl', 'shift', 'cmd', 'alt'}, "c", function() hs.osascript.applescript([[
 	my closeNotifications()
 on closeNotifications()
 	tell application "System Events" to tell process "Notification Center"
@@ -31,6 +32,18 @@ on closeNotifications()
 	end tell
 end closeNotifications
 ]])
+end)
+
+-- shyper + d will toggle DND status and alert me
+hs.hotkey.bind({'ctrl', 'shift', 'cmd', 'alt'}, "d", function() 
+	dndStatus = hs.execute("~/bin/do-not-disturb status"):gsub("\n$", "")
+		if dndStatus == "off" then
+			hs.alert.show("Do not disturb enabled")
+			hs.execute("~/bin/do-not-disturb on")
+		else
+			hs.alert.show("Do not disturb disabled")
+			hs.execute("~/bin/do-not-disturb off")
+		end
 end)
 
 hs.hotkey.bind({'ctrl', 'shift', 'cmd', 'alt'}, "l", function() hs.caffeinate.lockScreen() end)
