@@ -8,9 +8,8 @@
 return {
   -- { 'a', 'Music' },             -- "A" for "Apple Music"
   { 'c', 'Microsoft Teams' },             -- "c" for "chat"
-  { 'b', 'Brave Browser' },             -- "B" for "Browser"
+  { 'b', 'Google Chrome' },             -- "B" for "Browser"
   { 'e', 'Visual Studio Code' },             -- "E" for "editor"
-  { 'g', 'Google Chrome' },             -- "g" for "Google"
   { 't', 'Todoist'},
   { 'y', 'YNAB' },            -- "Y" for "YNAB"
   { 'n', 'Notion' },            -- "n" for "Notebook"
