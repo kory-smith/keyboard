@@ -18,6 +18,7 @@ return {
   { 'm', 'Microsoft Outlook' },       -- "M" for "eMail"
   { 'o', 'Microsoft OneNote' },       -- "O" for "OneNote"
   { 'p', 'Pushbullet' },             -- "g" for "Google"
+  { 'x', 'Microsoft Excel' },             -- "x" for "Excel"
   { 'z', 'zoom.us' },             -- "z" for "Zoom"
   { 'return', 'iTerm' },
 }
