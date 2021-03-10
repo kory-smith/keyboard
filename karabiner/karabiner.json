@@ -448,38 +448,100 @@
                         ]
                     },
                     {
+                        "description": "Mouse Mode + Spacebar -> Fast Mouse Mode",
+                        "manipulators": [{
+                            "from": {
+                                "key_code": "spacebar"
+                            },
+                            "to": [{
+                                "set_variable": {
+                                    "name": "fast-mouse-mode",
+                                    "value": 1
+                                }
+                            }],
+                            "to_after_key_up": [{
+                                "set_variable": {
+                                    "name": "fast-mouse-mode",
+                                    "value": 0
+                                }
+                            }],
+                            "conditions": [{
+                                "type": "variable_if",
+                                "name": "mouse-mode",
+                                "value": 1
+                              }],
+                            "type": "basic"
+                        }]
+                    },
+                    {
                         "description": "Mouse Mode + H -> Left",
-                        "manipulators": [
+                        "manipulators": [{
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [{
+                                    "mouse_key": {
+                                        "x": -10000
+                                    }
+                                }],
+                                "conditions": [{
+                                    "type": "variable_if",
+                                    "name": "fast-mouse-mode",
+                                    "value": 1
+                                }]
+                            },
                             {
                                 "type": "basic",
                                 "from": {
                                     "key_code": "h",
                                     "modifiers": {
-                                    "optional": [
-                                        "any"
-                                    ]
+                                        "optional": [
+                                            "any"
+                                        ]
                                     }
                                 },
-                                "to": [
-                                    {
+                                "to": [{
                                     "mouse_key": {
                                         "x": -1536
                                     }
-                                    }
-                                ],
-                                "conditions": [
-                                    {
+                                }],
+                                "conditions": [{
                                     "type": "variable_if",
                                     "name": "mouse-mode",
                                     "value": 1
-                                    }
-                                ]
-                                  }
+                                }]
+                            }
                         ]
                     },
                     {
                         "description": "Mouse Mode + J -> Down",
-                        "manipulators": [
+                        "manipulators": [{
+                            "type": "basic",
+                            "from": {
+                                "key_code": "j",
+                                "modifiers": {
+                                    "optional": [
+                                        "any"
+                                    ]
+                                }
+                            },
+                            "to": [{
+                                "mouse_key": {
+                                    "y": 10000
+                                }
+                            }],
+                            "conditions": [{
+                                "type": "variable_if",
+                                "name": "fast-mouse-mode",
+                                "value": 1
+                            }]
+                        },
                             {
                                 "type": "basic",
                                 "from": {
@@ -509,7 +571,27 @@
                     },
                     {
                         "description": "Mouse Mode + K -> Up",
-                        "manipulators": [
+                        "manipulators": [{
+                            "type": "basic",
+                            "from": {
+                                "key_code": "k",
+                                "modifiers": {
+                                    "optional": [
+                                        "any"
+                                    ]
+                                }
+                            },
+                            "to": [{
+                                "mouse_key": {
+                                    "y": -10000
+                                }
+                            }],
+                            "conditions": [{
+                                "type": "variable_if",
+                                "name": "fast-mouse-mode",
+                                "value": 1
+                            }]
+                        },
                             {
                                 "type": "basic",
                                 "from": {
@@ -539,7 +621,27 @@
                     },
                     {
                         "description": "Mouse Mode + L -> Right",
-                        "manipulators": [
+                        "manipulators": [{
+                            "type": "basic",
+                            "from": {
+                                "key_code": "l",
+                                "modifiers": {
+                                    "optional": [
+                                        "any"
+                                    ]
+                                }
+                            },
+                            "to": [{
+                                "mouse_key": {
+                                    "x": 10000
+                                }
+                            }],
+                            "conditions": [{
+                                "type": "variable_if",
+                                "name": "fast-mouse-mode",
+                                "value": 1
+                            }]
+                        },
                             {
                                 "type": "basic",
                                 "from": {
