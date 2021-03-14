@@ -38,20 +38,20 @@ menuNumberOfColumns = 5
 menuMinNumberOfRows = 4
 
 -- The height of menu rows in pixels
-menuRowHeight = 20
+menuRowHeight = 25
 
 -- The padding to apply to each side of the menu
-menuOuterPadding = 50
+menuOuterPadding = 70
 
 ----------------------------------------------------------------------------------------------------
 ----------------------------------------- Font options ---------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
 -- The font to apply to menu items.
-menuItemFont = "Courier-Bold"
+menuItemFont = "Menlo"
 
 -- The font size to apply to menu items.
-menuItemFontSize = 16
+menuItemFontSize = 15
 
 -- The text alignment to apply to menu items.
 menuItemTextAlign = "left"
