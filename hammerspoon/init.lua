@@ -40,7 +40,7 @@ require('keyboard.panes')
 require('keyboard.windows')
 require('keyboard.utils')
 require('keyboard.middle-click')
+menuHammer = hs.loadSpoon("MenuHammer")
+menuHammer:enter()
 
-
-
-hs.notify.new({title='Hammerspoon', informativeText='Ready to rock 🤘'}):send()
+hs.notify.new({title='Hammerspoon', informativeText='🤖 Operational'}):send()

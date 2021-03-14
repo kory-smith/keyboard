@@ -17,6 +17,8 @@ if ! grep -sq "require('keyboard')" ~/.hammerspoon/init.lua; then
   echo "require('keyboard') -- Load Hammerspoon bits from https://github.com/jasonrudolph/keyboard" >> ~/.hammerspoon/init.lua
 fi
 ln -sfn $PWD/hammerspoon ~/.hammerspoon/keyboard
+ln -sfn $PWD/hammerspoon/Spoons ~/.hammerspoon/Spoons
+ln -sfn $PWD/hammerspoon/menuHammerCustomConfig.lua ~/.hammerspoon/menuHammerCustomConfig.lua
 
 # Prepare custom settings for navigating between words in iTerm2
 grep -sq forward-word ~/.inputrc || cat $PWD/inputrc >> ~/.inputrc
