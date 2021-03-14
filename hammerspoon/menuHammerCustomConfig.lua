@@ -202,48 +202,48 @@ menuHammerMenuList = {
             {cons.cat.submenu, 'shift', '/', 'Help', {
                 {cons.act.menu, helpMenu}
             }},
-            {cons.cat.submenu, '', 'A', 'Applications', {
-                {cons.act.menu, applicationMenu}
-            }},
-            {cons.cat.submenu, '', 'B', 'Browser', {
-                {cons.act.menu, browserMenu}
-            }},
+            -- {cons.cat.submenu, '', 'A', 'Applications', {
+            --     {cons.act.menu, applicationMenu}
+            -- }},
+            -- {cons.cat.submenu, '', 'B', 'Browser', {
+            --     {cons.act.menu, browserMenu}
+            -- }},
             {cons.cat.submenu, '', 'D', 'Documents', {
                  {cons.act.menu, documentsMenu}
             }},
             {cons.cat.submenu, '', 'F', 'Finder', {
                 {cons.act.menu, finderMenu}
             }},
-            {cons.cat.submenu, '', 'G', 'Games', {
-                 {cons.act.menu, gamesMenu}
-            }},
+            -- {cons.cat.submenu, '', 'G', 'Games', {
+            --      {cons.act.menu, gamesMenu}
+            -- }},
             {cons.cat.submenu, '', 'H', 'Hammerspoon', {
                 {cons.act.menu, hammerspoonMenu}
             }},
-            {cons.cat.submenu, '', 'L', 'Layouts', {
-                 {cons.act.menu, layoutMenu}
-            }},
+            -- {cons.cat.submenu, '', 'L', 'Layouts', {
+            --      {cons.act.menu, layoutMenu}
+            -- }},
             {cons.cat.submenu, '', 'M', 'Media Controls', {
                 {cons.act.menu, mediaMenu}
             }},
-            {cons.cat.submenu, '', 'R', 'Resolution', {
-                {cons.act.menu, resolutionMenu}
-            }},
+            -- {cons.cat.submenu, '', 'R', 'Resolution', {
+            --     {cons.act.menu, resolutionMenu}
+            -- }},
             {cons.cat.submenu, '', 'S', 'System Preferences', {
                 {cons.act.menu, systemMenu}
             }},
             {cons.cat.submenu, '', 'T', 'Toggles', {
                  {cons.act.menu, toggleMenu}
             }},
-            {cons.cat.submenu, '', 'X', 'Text', {
-                 {cons.act.menu, textMenu}
-            }},
+            -- {cons.cat.submenu, '', 'X', 'Text', {
+            --      {cons.act.menu, textMenu}
+            -- }},
             {cons.cat.submenu, '', '/', 'Scripts', {
                  {cons.act.menu, scriptsMenu}
             }},
-            {cons.cat.action, '', 'space', "Spotlight", {
-                {cons.act.keycombo, {'cmd'}, 'space'}
-            }},
+            -- {cons.cat.action, '', 'space', "Spotlight", {
+            --     {cons.act.keycombo, {'cmd'}, 'space'}
+            -- }},
         }
     },
 
@@ -622,7 +622,42 @@ menuHammerMenuList = {
         parentMenu = mainMenu,
         menuHotkey = nil,
         menuItems = {
-        }
+            {cons.cat.action, '', 'O', "Copy URL of selected Outlook message", {
+                {cons.act.func, function() hs.osascript.applescript([[
+                    tell application "Microsoft Outlook"
+                      set selectedMessages to selected objects
+                      if selectedMessages is {} then
+                          display notification "Please select a message in Outlook before running the script!"
+                      else
+                          set messageId to id of item 1 of selectedMessages
+                          set uri to "outlook://" & messageId
+                          set the clipboard to uri
+                          display notification "URI " & uri & " copied to clipboard"
+                      end if
+                  end tell
+                  ]])
+                  end}
+            }},
+            {cons.cat.action, '', 'C', "Clear notifications", {
+                {cons.act.func, function() hs.osascript.applescript([[
+                    my closeNotifications()
+                on closeNotifications()
+                    tell application "System Events" to tell process "Notification Center"
+                        set theWindows to every window
+                        repeat with i from 1 to number of items in theWindows
+                            set this_item to item i of theWindows
+                            try
+                                click button 1 of this_item
+                            on error
+                                my closeNotifications()
+                            end try
+                        end repeat
+                    end tell
+                end closeNotifications
+                ]])
+                  end}
+            }},
+        }, 
     },
 
     ------------------------------------------------------------------------------------------------
@@ -636,7 +671,7 @@ menuHammerMenuList = {
                 {cons.act.system, cons.sys.forcequit},
             }},
             {cons.cat.action, '', 'L', "Lock Screen", {
-                {cons.act.system, cons.sys.lockscreen},
+                {cons.act.func, function() hs.caffeinate.lockScreen() end }
             }},
             {cons.cat.action, '', 'W', 'Wikipedia',
             {
@@ -711,12 +746,37 @@ menuHammerMenuList = {
             {cons.cat.action, '', 'C', "Caffeine", {
                  {cons.act.func, function() toggleCaffeine() end }
             }},
-            {cons.cat.action, '', 'D', "Hide/Show Dock", {
-                 {cons.act.keycombo, {'cmd', 'alt'}, 'd'}
+            {cons.cat.action, 'Shift', 'D', "Disable DND", {
+                {cons.act.func, function() 
+                    hs.alert.show("Do not disturb enabled")
+                    hs.execute("~/bin/do-not-disturb on")
+                    end}
+            }},
+            {cons.cat.action, '', 'D', "Enable DND", {
+                {cons.act.func, function() 
+                    hs.alert.show("Do not disturb disabled")
+                    hs.execute("~/bin/do-not-disturb off")
+                    end}
             }},
             {cons.cat.action, '', 'S', "Start Screensaver", {
                  {cons.act.system, cons.sys.screensaver},
             }},
+            {cons.cat.action, 'shift', 'V', "Disable VPN", {
+                {cons.act.func, function() hs.osascript.applescript([[
+                    tell application "Tunnelblick"
+                    disconnect "TorGuard.USA-CHICAGO"
+                end tell
+                ]])
+                end}
+           }},
+           {cons.cat.action, '', 'V', "enable VPN", {
+            {cons.act.func, function() hs.osascript.applescript([[
+                tell application "Tunnelblick"
+                connect "TorGuard.USA-CHICAGO"
+            end tell
+            ]])
+            end}
+       }},
             {cons.cat.action, 'shift', 'W', "Disable wi-fi", {
                  {cons.act.func, function() hs.wifi.setPower(false) end }
             }},
