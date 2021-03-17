@@ -135,6 +135,84 @@ menuItemPrefix = {
 menuKeyItemSeparator = ": "
 
 ----------------------------------------------------------------------------------------------------
+----------------------------------------- Kory's options ---------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+-- Non-work laptop toggle items
+local dynamicToggleMenuItems = {            
+    {cons.cat.action, '', 'C', "Caffeine", {
+        {cons.act.func, function() toggleCaffeine() end }
+    }},
+    {cons.cat.action, '', 'S', "Start Screensaver", {
+        {cons.act.system, cons.sys.screensaver},
+    }},
+    {cons.cat.action, '', 'V', "enable VPN", {
+        {cons.act.func, function() hs.osascript.applescript([[
+            tell application "Tunnelblick"
+            connect "TorGuard.USA-CHICAGO"
+            end tell
+            ]])
+        end}
+    }},
+    {cons.cat.action, 'shift', 'V', "Disable VPN", {
+        {cons.act.func, function() hs.osascript.applescript([[
+            tell application "Tunnelblick"
+            disconnect "TorGuard.USA-CHICAGO"
+            end tell
+                ]])
+            end}
+    }},
+    {cons.cat.action, '', 'W', "Enable wi-fi", {
+        {cons.act.func, function() hs.wifi.setPower(true) end }
+    }},
+    {cons.cat.action, 'shift', 'W', "Disable wi-fi", {
+        {cons.act.func, function() hs.wifi.setPower(false) end }
+    }},
+}
+
+-- Work laptop toggle items
+if hs.host.localizedName() == "OF014X1C3UJG5JI" then
+    dynamicToggleMenuItems = {            
+        {cons.cat.action, '', 'C', "Caffeine", {
+            {cons.act.func, function() toggleCaffeine() end }
+        }},
+        {cons.cat.action, '', 'D', "Enable DND", {
+            {cons.act.func, function() 
+                hs.alert.show("Do not disturb enabled")
+                hs.execute("~/bin/do-not-disturb on")
+                end}
+        }},
+        {cons.cat.action, 'Shift', 'D', "Disable DND", {
+            {cons.act.func, function() 
+                hs.alert.show("Do not disturb disabled")
+                hs.execute("~/bin/do-not-disturb off")
+           end}
+        }},
+        {cons.cat.action, '', 'S', "Start Screensaver", {
+            {cons.act.system, cons.sys.screensaver},
+        }},
+        {cons.cat.action, '', 'V', "Enable VPN", {
+            {cons.act.func, function() 
+                local pulse = hs.application.find("Pulse Secure")
+                pulse:selectMenuItem("Connect")
+                end}
+        }},
+        {cons.cat.action, 'shift', 'V', "Disable VPN", {
+            {cons.act.func, function() 
+                local pulse = hs.application.find("Pulse Secure")
+                pulse:selectMenuItem("Disconnect")
+                end}
+        }},
+        {cons.cat.action, '', 'W', "Enable wi-fi", {
+            {cons.act.func, function() hs.wifi.setPower(true) end }
+        }},
+        {cons.cat.action, 'shift', 'W', "Disable wi-fi", {
+            {cons.act.func, function() hs.wifi.setPower(false) end }
+        }},
+    } 
+end
+
+----------------------------------------------------------------------------------------------------
 --------------------------------------- Default Menus ----------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
@@ -412,7 +490,7 @@ menuHammerMenuList = {
                  {cons.act.typetext, '~/.hammerspoon\n'},
             }},
             {cons.cat.action, '', 'M', 'MenuHammer Custom Config', {
-                 {cons.act.openfile, "~/.hammerspoon/menuHammerCustomConfig.lua"},
+                 {cons.act.openfile, "~/OneDrive - The Kroger Co"},
             }},
             {cons.cat.action, 'shift', 'M', 'MenuHammer Default Config', {
                  {cons.act.openfile, "~/.hammerspoon/Spoons/MenuHammer.spoon/MenuConfigDefaults.lua"},
@@ -742,47 +820,6 @@ menuHammerMenuList = {
     [toggleMenu] = {
         parentMenu = mainMenu,
         menuHotkey = nil,
-        menuItems = {
-            {cons.cat.action, '', 'C', "Caffeine", {
-                 {cons.act.func, function() toggleCaffeine() end }
-            }},
-            {cons.cat.action, 'Shift', 'D', "Disable DND", {
-                {cons.act.func, function() 
-                    hs.alert.show("Do not disturb enabled")
-                    hs.execute("~/bin/do-not-disturb on")
-                    end}
-            }},
-            {cons.cat.action, '', 'D', "Enable DND", {
-                {cons.act.func, function() 
-                    hs.alert.show("Do not disturb disabled")
-                    hs.execute("~/bin/do-not-disturb off")
-                    end}
-            }},
-            {cons.cat.action, '', 'S', "Start Screensaver", {
-                 {cons.act.system, cons.sys.screensaver},
-            }},
-            {cons.cat.action, 'shift', 'V', "Disable VPN", {
-                {cons.act.func, function() hs.osascript.applescript([[
-                    tell application "Tunnelblick"
-                    disconnect "TorGuard.USA-CHICAGO"
-                end tell
-                ]])
-                end}
-           }},
-           {cons.cat.action, '', 'V', "enable VPN", {
-            {cons.act.func, function() hs.osascript.applescript([[
-                tell application "Tunnelblick"
-                connect "TorGuard.USA-CHICAGO"
-            end tell
-            ]])
-            end}
-       }},
-            {cons.cat.action, 'shift', 'W', "Disable wi-fi", {
-                 {cons.act.func, function() hs.wifi.setPower(false) end }
-            }},
-            {cons.cat.action, '', 'W', "Enable wi-fi", {
-                 {cons.act.func, function() hs.wifi.setPower(true) end }
-            }},
-        }
+        menuItems = dynamicToggleMenuItems
     },
 }
