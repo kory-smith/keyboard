@@ -654,7 +654,7 @@
               {
                 "type": "basic",
                 "from": {
-                  "key_code": "",
+                  "key_code": "spacebar",
                   "modifiers": {
                     "optional": ["any"]
                   }
