@@ -327,14 +327,14 @@
                     }]
                 },
                 {
-                    "description": "D+F -> Mouse Mode",
+                    "description": "Q + W -> Mouse Mode",
                     "manipulators": [{
                         "from": {
                             "simultaneous": [{
-                                    "key_code": "d"
+                                    "key_code": "q"
                                 },
                                 {
-                                    "key_code": "f"
+                                    "key_code": "w"
                                 }
                             ],
                             "simultaneous_options": {
@@ -360,10 +360,10 @@
                     }]
                 },
                 {
-                    "description": "Mouse Mode + Spacebar -> Fast Mouse Mode",
+                    "description": "Mouse Mode + E -> Fast Mouse Mode",
                     "manipulators": [{
                         "from": {
-                            "key_code": "spacebar"
+                            "key_code": "e"
                         },
                         "to": [{
                             "set_variable": {
@@ -386,11 +386,11 @@
                     }]
                 },
                 {
-                    "description": "Mouse Mode + H -> Left",
+                    "description": "Mouse Mode + J -> Left",
                     "manipulators": [{
                             "type": "basic",
                             "from": {
-                                "key_code": "h",
+                                "key_code": "j",
                                 "modifiers": {
                                     "optional": [
                                         "any"
@@ -411,7 +411,7 @@
                         {
                             "type": "basic",
                             "from": {
-                                "key_code": "h",
+                                "key_code": "j",
                                 "modifiers": {
                                     "optional": [
                                         "any"
@@ -432,11 +432,11 @@
                     ]
                 },
                 {
-                    "description": "Mouse Mode + J -> Down",
+                    "description": "Mouse Mode + K -> Down",
                     "manipulators": [{
                             "type": "basic",
                             "from": {
-                                "key_code": "j",
+                                "key_code": "k",
                                 "modifiers": {
                                     "optional": [
                                         "any"
@@ -457,7 +457,7 @@
                         {
                             "type": "basic",
                             "from": {
-                                "key_code": "j",
+                                "key_code": "k",
                                 "modifiers": {
                                     "optional": [
                                         "any"
@@ -478,11 +478,11 @@
                     ]
                 },
                 {
-                    "description": "Mouse Mode + K -> Up",
+                    "description": "Mouse Mode + I -> Up",
                     "manipulators": [{
                             "type": "basic",
                             "from": {
-                                "key_code": "k",
+                                "key_code": "i",
                                 "modifiers": {
                                     "optional": [
                                         "any"
@@ -503,7 +503,7 @@
                         {
                             "type": "basic",
                             "from": {
-                                "key_code": "k",
+                                "key_code": "i",
                                 "modifiers": {
                                     "optional": [
                                         "any"
@@ -570,11 +570,11 @@
                     ]
                 },
                 {
-                    "description": "Mouse Mode + N -> Left Click",
+                    "description": "Mouse Mode + Spacebar -> Left Click",
                     "manipulators": [{
                         "type": "basic",
                         "from": {
-                            "key_code": "n",
+                            "key_code": "",
                             "modifiers": {
                                 "optional": [
                                     "any"
