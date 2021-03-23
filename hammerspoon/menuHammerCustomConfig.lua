@@ -709,11 +709,11 @@ menuHammerMenuList = {
         parentMenu = mainMenu,
         menuHotkey = nil,
         menuItems = {
-            {cons.cat.action, '', 'D', "Enable DND", {
+            {cons.cat.action, '', 'S', "Silence", {
                 {cons.act.func, function() 
                     local key = envVars['key']
                     local autoremoteURL = 
-                    'https://autoremotejoaomgcd.appspot.com/sendmessage?key=' .. key .. '&message=dndon'
+                    'https://autoremotejoaomgcd.appspot.com/sendmessage?key=' .. key .. '&message=silence'
                         hs.http.asyncGet(
                             autoremoteURL,
                             nil, 
@@ -723,11 +723,11 @@ menuHammerMenuList = {
                         )
                 end}
             }},
-            {cons.cat.action, 'shift', 'D', "Disable DND", {
+            {cons.cat.action, '', 'L', "Loudence", {
                 {cons.act.func, function() 
                     local key = envVars['key']
                     local autoremoteURL = 
-                    'https://autoremotejoaomgcd.appspot.com/sendmessage?key=' .. key .. '&message=dndoff'
+                    'https://autoremotejoaomgcd.appspot.com/sendmessage?key=' .. key .. '&message=loudence'
                         hs.http.asyncGet(
                             autoremoteURL,
                             nil, 
