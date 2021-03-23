@@ -1,2 +1,3 @@
 hammerspoon/windows-bindings.lua
+hammerspoon/env.lua
 karabiner/automatic_backups

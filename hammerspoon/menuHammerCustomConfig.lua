@@ -1,3 +1,10 @@
+
+local status, envVars = pcall(require, 'keyboard.env')
+
+if not status then
+  envVars = require('keyboard.env')
+end
+
 ----------------------------------------------------------------------------------------------------
 --------------------------------------- General Config ---------------------------------------------
 ----------------------------------------------------------------------------------------------------
@@ -265,6 +272,8 @@ local textMenu = "textMenu"
 -- Toggles menu
 local toggleMenu = "toggleMenu"
 
+local phoneMenu = "phoneMenu"
+
 -- Window menu
 local resizeMenu = "resizeMenu"
 
@@ -309,6 +318,9 @@ menuHammerMenuList = {
             -- }},
             {cons.cat.submenu, '', 'S', 'System Preferences', {
                 {cons.act.menu, systemMenu}
+            }},
+            {cons.cat.submenu, '', 'P', 'Phone', {
+                {cons.act.menu, phoneMenu}
             }},
             {cons.cat.submenu, '', 'T', 'Toggles', {
                  {cons.act.menu, toggleMenu}
@@ -691,6 +703,41 @@ menuHammerMenuList = {
         parentMenu = mainMenu,
         menuHotkey = nil,
         menuItems = resolutionMenuItems
+    },
+
+    [phoneMenu]= {
+        parentMenu = mainMenu,
+        menuHotkey = nil,
+        menuItems = {
+            {cons.cat.action, '', 'D', "Enable DND", {
+                {cons.act.func, function() 
+                    local key = envVars['key']
+                    local autoremoteURL = 
+                    'https://autoremotejoaomgcd.appspot.com/sendmessage?key=' .. key .. '&message=dndon'
+                        hs.http.asyncGet(
+                            autoremoteURL,
+                            nil, 
+                            function()
+                                hs.alert.show("Your phone is now on silent")
+                            end
+                        )
+                end}
+            }},
+            {cons.cat.action, 'shift', 'D', "Disable DND", {
+                {cons.act.func, function() 
+                    local key = envVars['key']
+                    local autoremoteURL = 
+                    'https://autoremotejoaomgcd.appspot.com/sendmessage?key=' .. key .. '&message=dndoff'
+                        hs.http.asyncGet(
+                            autoremoteURL,
+                            nil, 
+                            function()
+                                hs.alert.show("Your phone is now on loud")
+                            end
+                        )
+                end}
+            }}
+        }
     },
 
     ------------------------------------------------------------------------------------------------
