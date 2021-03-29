@@ -18,6 +18,7 @@ local bindingsList = {
   { 'return', 'iTerm' },
 }
 
+-- Work computer bindings
 if hs.host.localizedName() == "OF014X1C3UJG5JI" then
   bindingsList = {
     { 'c', 'Microsoft Teams' },             -- "c" for "chat"
@@ -29,7 +30,6 @@ if hs.host.localizedName() == "OF014X1C3UJG5JI" then
     { 'f', 'Finder' },            -- "F" for "Finder"
     { 's', 'Spotify' },            -- "S" for "Spotify"
     { 'm', 'Microsoft Outlook' },       -- "M" for "eMail"
-    { 'o', 'Microsoft OneNote' },       -- "O" for "OneNote"
     { 'p', 'Pushbullet' },             -- "g" for "Google"
     { 'x', 'Microsoft Excel' },             -- "x" for "Excel"
     { 'z', 'zoom.us' },             -- "z" for "Zoom"
