@@ -147,8 +147,20 @@ menuKeyItemSeparator = ": "
 
 -- Non-work laptop toggle items
 local dynamicToggleMenuItems = {            
-    {cons.cat.action, '', 'C', "Caffeine", {
-        {cons.act.func, function() toggleCaffeine() end }
+    {cons.cat.action, '', 'C', "Caffeinate", {
+        {cons.act.func, function() 
+            caffeineMenuItem = hs.menubar.new()
+            hs.caffeinate.set("displayIdle", true, true)
+            local homePath = os.getenv("HOME")
+            local coffeeIconPath = homePath .. "/.hammerspoon/keyboard/images/highlightactive.png"
+            caffeineMenuItem:setIcon(coffeeIconPath)
+          end}
+    }},
+    {cons.cat.action, 'Shift', 'C', "Decaffeinate", {
+        {cons.act.func, function() 
+            hs.caffeinate.set("displayIdle", false, false)
+            caffeineMenuItem:delete()
+          end}
     }},
     {cons.cat.action, '', 'S', "Start Screensaver", {
         {cons.act.system, cons.sys.screensaver},
@@ -180,8 +192,20 @@ local dynamicToggleMenuItems = {
 -- Work laptop toggle items
 if hs.host.localizedName() == "OF014X1C3UJG5JI" then
     dynamicToggleMenuItems = {            
-        {cons.cat.action, '', 'C', "Caffeine", {
-            {cons.act.func, function() toggleCaffeine() end }
+        {cons.cat.action, '', 'C', "Caffeinate", {
+            {cons.act.func, function() 
+                caffeineMenuItem = hs.menubar.new()
+                hs.caffeinate.set("displayIdle", true, true)
+                local homePath = os.getenv("HOME")
+                local coffeeIconPath = homePath .. "/.hammerspoon/keyboard/images/highlightactive.png"
+                caffeineMenuItem:setIcon(coffeeIconPath)
+              end}
+        }},
+        {cons.cat.action, 'Shift', 'C', "Decaffeinate", {
+            {cons.act.func, function() 
+                hs.caffeinate.set("displayIdle", false, false)
+                caffeineMenuItem:delete()
+              end}
         }},
         {cons.cat.action, '', 'D', "Enable DND", {
             {cons.act.func, function() 
