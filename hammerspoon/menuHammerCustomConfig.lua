@@ -222,6 +222,20 @@ if hs.host.localizedName() == "OF014X1C3UJG5JI" then
         {cons.cat.action, '', 'S', "Start Screensaver", {
             {cons.act.system, cons.sys.screensaver},
         }},
+        {cons.cat.action, '', 'M', "Enable Mouse Mover", {
+            {cons.act.func, function() 
+                mouseMode = 1
+                hs.timer.doWhile(function() return mouseMode == 1 end, function() 
+                    hs.mouse.setRelativePosition({x = 15, y = 15})
+                    hs.mouse.setRelativePosition({x = 1050, y = 1005})
+                end) 
+           end},
+        }},
+        {cons.cat.action, 'Shift', 'M', "Disable Mouse Mover", {
+            {cons.act.func, function() 
+                mouseMode = 0
+           end},
+        }},
         {cons.cat.action, '', 'V', "Enable VPN", {
             {cons.act.func, function() 
                 local pulse = hs.application.find("Pulse Secure")
