@@ -806,6 +806,18 @@ menuHammerMenuList = {
                 ]])
                   end}
             }},
+            {cons.cat.action, '', 'K', "Kill teams and outlook", {
+                {cons.act.func, function() 
+                local outlook = hs.application.find("Microsoft Outlook")
+                local teams = hs.application.find("Microsoft Teams")
+                if teams then
+                    teams:kill()
+                  end
+                if outlook then
+                    outlook:kill()
+                end
+                  end}
+            }},
         }, 
     },
 
