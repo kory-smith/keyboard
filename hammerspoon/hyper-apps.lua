@@ -28,7 +28,6 @@ if hs.host.localizedName() == "OF014X1C3UJG5JI" then
     { 'y', 'YNAB' },            -- "Y" for "YNAB"
     { 'n', 'Notion' },            -- "n" for "Notebook"
     { 'f', 'Finder' },            -- "F" for "Finder"
-    { 's', 'Spotify' },            -- "S" for "Spotify"
     { 'm', 'Microsoft Outlook' },       -- "M" for "eMail"
     { 'p', 'Pushbullet' },             -- "g" for "Google"
     { 'x', 'Microsoft Excel' },             -- "x" for "Excel"
