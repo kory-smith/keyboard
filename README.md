@@ -184,7 +184,7 @@ This setup is honed and tested with the following dependencies.
 1. Grab the bits
 
     ```sh
-    git clone https://github.com/jasonrudolph/keyboard.git ~/.keyboard
+    git clone https://github.com/kory-smith/keyboard.git ~/.keyboard
 
     cd ~/.keyboard
 
