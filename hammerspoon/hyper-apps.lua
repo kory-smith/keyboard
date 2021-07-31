@@ -12,7 +12,19 @@ local bindingsList = {
   { 'f', 'Finder' },            -- "F" for "Finder"
   { 'n', 'Notion' },            -- "n" for "Notebook"
   { 't', 'Todoist'},
-  { 'x', 'OpenOffice' },            -- "Y" for "YNAB"
+  { 'x', function()
+          if 
+            hs.application.get("OpenOffice")
+          then
+            hs.application.launchOrFocus("OpenOffice")
+          else
+            hs.application.launchOrFocus("OpenOffice")
+            hs.timer.doAfter
+            (1, function()
+                  hs.eventtap.keyStroke(null, "s")
+                end)
+          end
+        end},            -- "Y" for "YNAB"
   { 'y', 'YNAB' },            -- "Y" for "YNAB"
   { 'return', 'iTerm' },
 }
