@@ -6,14 +6,13 @@
 
 local bindingsList = {
   { 'b', 'Brave Browser' },             -- "B" for "Browser"
-  { 'c', 'Docker Desktop' },             -- "c" for "Containers"
+  { 'c', 'Google Chrome' },             -- "c" for "Containers"
   { 'd', 'Dashlane' },             -- "d" for "Dashlane"
   { 'e', 'Visual Studio Code' },             -- "E" for "editor"
   { 'f', 'Finder' },            -- "F" for "Finder"
-  { 'g', 'Google Chrome' },             -- "g" for "Google"
   { 'n', 'Notion' },            -- "n" for "Notebook"
-  { 'p', 'Pushbullet' },             -- "p" for "Pushbullet"
   { 't', 'Todoist'},
+  { 'x', 'OpenOffice' },            -- "Y" for "YNAB"
   { 'y', 'YNAB' },            -- "Y" for "YNAB"
   { 'return', 'iTerm' },
 }
