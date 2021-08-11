@@ -21,17 +21,17 @@ local bindingsList = {
 -- Work computer bindings
 if hs.host.localizedName() == "OF014X1C3UJG5JI" then
   bindingsList = {
-    { 'c', 'Microsoft Teams' },             -- "c" for "chat"
     { 'b', 'Google Chrome' },             -- "B" for "Browser"
+    { 'c', 'Microsoft Teams' },             -- "c" for "chat"
     { 'e', 'Visual Studio Code' },             -- "E" for "editor"
-    { 'g', 'Fork' },             -- "E" for "editor"
-    { 't', 'Todoist'},
-    { 'y', 'YNAB' },            -- "Y" for "YNAB"
-    { 'n', 'Notion' },            -- "n" for "Notebook"
     { 'f', 'Finder' },            -- "F" for "Finder"
+    { 'g', 'Fork' },             -- "E" for "editor"
     { 'm', 'Microsoft Outlook' },       -- "M" for "eMail"
+    { 'n', 'Notion' },            -- "n" for "Notebook"
     { 'p', 'Join' },             -- "g" for "Google"
+    { 't', 'Todoist'},
     { 'x', 'Microsoft Excel' },             -- "x" for "Excel"
+    { 'y', 'YNAB' },            -- "Y" for "YNAB"
     { 'z', 'zoom.us' },             -- "z" for "Zoom"
     { 'return', 'iTerm' },
   }
