@@ -24,12 +24,13 @@ if hs.host.localizedName() == "OF014X1C3UJG5JI" then
     { 'c', 'Microsoft Teams' },             -- "c" for "chat"
     { 'b', 'Google Chrome' },             -- "B" for "Browser"
     { 'e', 'Visual Studio Code' },             -- "E" for "editor"
+    { 'g', 'Fork' },             -- "E" for "editor"
     { 't', 'Todoist'},
     { 'y', 'YNAB' },            -- "Y" for "YNAB"
     { 'n', 'Notion' },            -- "n" for "Notebook"
     { 'f', 'Finder' },            -- "F" for "Finder"
     { 'm', 'Microsoft Outlook' },       -- "M" for "eMail"
-    { 'p', 'Pushbullet' },             -- "g" for "Google"
+    { 'p', 'Join' },             -- "g" for "Google"
     { 'x', 'Microsoft Excel' },             -- "x" for "Excel"
     { 'z', 'zoom.us' },             -- "z" for "Zoom"
     { 'return', 'iTerm' },
