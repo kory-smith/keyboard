@@ -165,21 +165,14 @@ local dynamicToggleMenuItems = {
     {cons.cat.action, '', 'S', "Start Screensaver", {
         {cons.act.system, cons.sys.screensaver},
     }},
-    {cons.cat.action, '', 'V', "enable VPN", {
-        {cons.act.func, function() hs.osascript.applescript([[
-            tell application "Tunnelblick"
-            connect "TorGuard.USA-CHICAGO"
-            end tell
-            ]])
+    {cons.cat.action, '', 'V', "Toggle VPN", {
+        {cons.act.func, function() 
+            local currentWindow = hs.application.frontmostApplication()
+            hs.inspect(print(currentWindow.name))
+            hs.application.launchOrFocus("Wireguard")
+            hs.eventtap.keyStroke("CMD", "T")
+            currentWindow:activate()
         end}
-    }},
-    {cons.cat.action, 'shift', 'V', "Disable VPN", {
-        {cons.act.func, function() hs.osascript.applescript([[
-            tell application "Tunnelblick"
-            disconnect "TorGuard.USA-CHICAGO"
-            end tell
-                ]])
-            end}
     }},
     {cons.cat.action, '', 'W', "Enable wi-fi", {
         {cons.act.func, function() hs.wifi.setPower(true) end }
