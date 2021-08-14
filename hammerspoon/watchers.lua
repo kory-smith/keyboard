@@ -37,8 +37,8 @@ return {
     end),
 
     wifiWatcher = hs.wifi.watcher.new(function(watcher, a, b)
-        if (hs.wifi.currentNetwork() ~= "Pie-fi-5G" and hs.network.interfaceDetails() ~= "nil")
-        or (hs.wifi.currentNetwork() ~= "Platypus Cave 5G" and hs.network.interfaceDetails() ~= "nil") then
+        if (hs.wifi.currentNetwork() ~= "Pie-fi-5G" and hs.network.interfaceDetails() ~= "nil") or
+            (hs.wifi.currentNetwork() ~= "Platypus Cave 5G" and hs.network.interfaceDetails() ~= "nil") then
             engageWithTunnel("connect")
         end
         if (hs.wifi.currentNetwork() == "Pie-fi-5G") or (hs.wifi.currentNetwork() == "Platypus Cave 5G") then
