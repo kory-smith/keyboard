@@ -1,3 +1,6 @@
+menuHammer = hs.loadSpoon("MenuHammer")
+menuHammer:enter()
+
 local log = hs.logger.new('init.lua', 'debug')
 
 -- Use Control+` to reload Hammerspoon config
@@ -31,19 +34,17 @@ enableHotkeyForWindowsMatchingFilter = function(windowFilter, hotkey)
   end)
 end
 
-require('keyboard.control-escape')
 -- require('keyboard.delete-words')
-require('keyboard.hyper')
-require('keyboard.markdown')
 -- require('keyboard.microphone')
-require('keyboard.panes')
-require('keyboard.windows')
-require('keyboard.utils')
 local Watchers = require('keyboard.watchers')
 Watchers.mouseWatcher:start()
-
+Watchers.wifiWatcher:start()
+require('keyboard.control-escape')
+require('keyboard.hyper')
+require('keyboard.markdown')
 require('keyboard.middle-click')
-menuHammer = hs.loadSpoon("MenuHammer")
-menuHammer:enter()
+require('keyboard.panes')
+require('keyboard.utils')
+require('keyboard.windows')
 
 hs.notify.new({title='Hammerspoon', informativeText='🤖 Operational'}):send()
