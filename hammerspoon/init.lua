@@ -36,7 +36,7 @@ end
 
 -- require('keyboard.delete-words')
 -- require('keyboard.microphone')
-require('keyboard.control-escape')
+-- require('keyboard.control-escape')
 require('keyboard.hyper')
 require('keyboard.markdown')
 require('keyboard.middle-click')
