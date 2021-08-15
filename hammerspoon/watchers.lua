@@ -34,7 +34,8 @@ return {
                 hs.mouse.trackingSpeed(0.6875)
             end
         end
-    end),
+    end)
+    :start(),
 
     wifiWatcher = hs.wifi.watcher.new(function(watcher, a, b)
         if (hs.wifi.currentNetwork() ~= "Pie-fi-5G" and hs.network.interfaceDetails() ~= "nil") or
@@ -45,4 +46,5 @@ return {
             engageWithTunnel("disconnect")
         end
     end)
+    :start()
 }

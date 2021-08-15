@@ -36,15 +36,13 @@ end
 
 -- require('keyboard.delete-words')
 -- require('keyboard.microphone')
-local Watchers = require('keyboard.watchers')
-Watchers.mouseWatcher:start()
-Watchers.wifiWatcher:start()
 require('keyboard.control-escape')
 require('keyboard.hyper')
 require('keyboard.markdown')
 require('keyboard.middle-click')
 require('keyboard.panes')
 require('keyboard.utils')
+require('keyboard.watchers')
 require('keyboard.windows')
 
 hs.notify.new({
