@@ -2,7 +2,6 @@
 -----------------------------------------------
 SpoonInstall = hs.loadSpoon("SpoonInstall")
 SpoonInstall.use_syncinstall = true
-SpoonInstall:andUse("MenuHammer")
 SpoonInstall:andUse("KSheet")
 
 menuHammer = hs.loadSpoon("MenuHammer")
