@@ -693,12 +693,14 @@ menuHammerMenuList = {
             {cons.cat.action, '', 'H', "Previous Track", {
                 {cons.act.mediakey, "previous"}
             }},
-            {cons.cat.action, '', 'J', "Volume Down", {
-                {cons.act.mediakey, "volume", -10}
-            }},
-            {cons.cat.action, '', 'K', "Volume Up", {
-                {cons.act.mediakey, "volume", 10}
-            }},
+            {cons.cat.action, '', 'J', "Volume Down 10%", {
+                {cons.act.mediakey, "adjustVolume", -10}},
+                true,
+           },
+            {cons.cat.action, '', 'K', "Volume Up 10%", {
+                {cons.act.mediakey, "adjustVolume", 10}},
+                true,
+           },
             {cons.cat.action, '', 'L', "Next Track", {
                 {cons.act.mediakey, "next"}
             }},
@@ -708,12 +710,14 @@ menuHammerMenuList = {
             {cons.cat.action, '', 'S', "Play/Pause", {
                 {cons.act.mediakey, "playpause"}
             }},
-            {cons.cat.action, '', 'I', "Brightness Down", {
-                {cons.act.mediakey, "brightness", -10}
-            }},
+            {cons.cat.action, '', 'I', "Brightness Up", {
+                {cons.act.mediakey, "setBrightness", 10}},
+                true,
+           },
             {cons.cat.action, '', 'O', "Brightness Up", {
-                {cons.act.mediakey, "brightness", 10}
-            }},
+                {cons.act.mediakey, "setBrightness", -10}},
+                true
+            },
         }
     },
 
