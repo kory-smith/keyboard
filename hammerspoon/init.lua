@@ -1,6 +1,17 @@
+-- Spoon installation and configuration
+-----------------------------------------------
+SpoonInstall = hs.loadSpoon("SpoonInstall")
+SpoonInstall.use_syncinstall = true
+SpoonInstall:andUse("MenuHammer")
+SpoonInstall:andUse("KSheet")
+
 menuHammer = hs.loadSpoon("MenuHammer")
 menuHammer:enter()
 
+KSheet = hs.loadSpoon("KSheet")
+KSheet:init()
+KSheet:bindHotkeys({toggle = {{'ctrl', 'cmd', 'alt'}, "/"}})
+-----------------------------------------------
 local log = hs.logger.new('init.lua', 'debug')
 
 -- Use Control+` to reload Hammerspoon config
