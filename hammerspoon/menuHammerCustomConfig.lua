@@ -715,9 +715,13 @@ menuHammerMenuList = {
                 true,
            },
             {cons.cat.action, '', 'O', "Brightness Up", {
-                {cons.act.mediakey, "setBrightness", -10}},
+                {cons.act.mediakey, "adjustBrightness", 10}},
                 true
             },
+            {cons.cat.action, '', 'I', "Brightness Down", {
+                {cons.act.mediakey, "adjustBrightness", -10}},
+                true,
+           },
         }
     },
 
