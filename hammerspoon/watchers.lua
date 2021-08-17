@@ -26,6 +26,20 @@ local engageWithTunnel = function(connectOrDisconnect)
     end
 end
 
+local shouldConnecttoVPN = function()
+    local _, status = hs.osascript.applescript([[
+        tell application "Tunnelblick"
+        get state of first configuration
+        end tell
+        ]])
+    local isAtTrustedPlace = 
+        (hs.wifi.currentNetwork() == "Pie-fi-5G" or
+        hs.wifi.currentNetwork() == "Platypus Cave 5G" or
+        hs.wifi.currentNetwork() == "Pie-fi")
+    local isWifiEnabled = hs.network.interfaceDetails() ~= "nil"
+    return not (isAtTrustedPlace and isWifiEnabled and status == "CONNECTED")
+end
+
 return {
     mouseWatcher = hs.usb.watcher.new(function(deviceTable)
         if (deviceTable.eventType == "added" and deviceTable.productName == "Microsoft Pro Intellimouse") then
@@ -37,12 +51,10 @@ return {
     end)
     :start(),
 
-    wifiWatcher = hs.wifi.watcher.new(function(watcher, a, b)
-        if (hs.wifi.currentNetwork() ~= "Pie-fi-5G" and hs.network.interfaceDetails() ~= "nil") or
-            (hs.wifi.currentNetwork() ~= "Platypus Cave 5G" and hs.network.interfaceDetails() ~= "nil") then
+    wifiWatcher = hs.wifi.watcher.new(function()
+        if shouldConnecttoVPN() then
             engageWithTunnel("connect")
-        end
-        if (hs.wifi.currentNetwork() == "Pie-fi-5G") or (hs.wifi.currentNetwork() == "Platypus Cave 5G") then
+        else
             engageWithTunnel("disconnect")
         end
     end)
