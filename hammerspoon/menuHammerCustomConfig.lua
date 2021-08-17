@@ -693,11 +693,11 @@ menuHammerMenuList = {
             {cons.cat.action, '', 'H', "Previous Track", {
                 {cons.act.mediakey, "previous"}
             }},
-            {cons.cat.action, '', 'J', "Volume Down 10%", {
+            {cons.cat.action, '', 'J', "Volume Down", {
                 {cons.act.mediakey, "adjustVolume", -10}},
                 true,
            },
-            {cons.cat.action, '', 'K', "Volume Up 10%", {
+            {cons.cat.action, '', 'K', "Volume Up", {
                 {cons.act.mediakey, "adjustVolume", 10}},
                 true,
            },
