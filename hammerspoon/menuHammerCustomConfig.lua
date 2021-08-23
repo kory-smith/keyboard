@@ -252,9 +252,6 @@ local layoutMenu = "layoutMenu"
 -- Media menu
 local mediaMenu = "mediaMenu"
 
--- Resolution menu
-local resolutionMenu = "resolutionMenu"
-
 -- Scripts menu
 local scriptsMenu = "scriptsMenu"
 
@@ -308,9 +305,6 @@ menuHammerMenuList = {
             {cons.cat.submenu, '', 'M', 'Media Controls', {
                 {cons.act.menu, mediaMenu}
             }},
-            -- {cons.cat.submenu, '', 'R', 'Resolution', {
-            --     {cons.act.menu, resolutionMenu}
-            -- }},
             {cons.cat.submenu, '', 'S', 'System Preferences', {
                 {cons.act.menu, systemMenu}
             }},
@@ -697,15 +691,6 @@ menuHammerMenuList = {
         menuHotkey = nil,
         menuItems = {
         }
-    },
-
-    ------------------------------------------------------------------------------------------------
-    -- Resolution Menu
-    ------------------------------------------------------------------------------------------------
-    resolutionMenu = {
-        parentMenu = mainMenu,
-        menuHotkey = nil,
-        menuItems = resolutionMenuItems
     },
 
     [phoneMenu]= {
