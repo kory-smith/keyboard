@@ -665,10 +665,6 @@ menuHammerMenuList = {
             {cons.cat.action, '', 'S', "Play/Pause", {
                 {cons.act.mediakey, "playpause"}
             }},
-            {cons.cat.action, '', 'I', "Brightness Up", {
-                {cons.act.mediakey, "setBrightness", 10}},
-                true,
-           },
             {cons.cat.action, '', 'O', "Brightness Up", {
                 {cons.act.mediakey, "adjustBrightness", 10}},
                 true
