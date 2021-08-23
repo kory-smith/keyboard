@@ -320,9 +320,6 @@ menuHammerMenuList = {
             {cons.cat.submenu, '', '/', 'Scripts', {
                  {cons.act.menu, scriptsMenu}
             }},
-            -- {cons.cat.action, '', 'space', "Spotlight", {
-            --     {cons.act.keycombo, {'cmd'}, 'space'}
-            -- }},
         }
     },
 
