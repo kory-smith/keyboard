@@ -179,9 +179,6 @@ if hs.host.localizedName() == "OF014X1C3UJG5JI" then
                 hs.execute("~/bin/do-not-disturb off")
            end}
         }},
-        {cons.cat.action, '', 'S', "Start Screensaver", {
-            {cons.act.system, cons.sys.screensaver},
-        }},
         {cons.cat.action, '', 'M', "Enable Mouse Mover", {
             {cons.act.func, function() 
                 mouseMode = 1
