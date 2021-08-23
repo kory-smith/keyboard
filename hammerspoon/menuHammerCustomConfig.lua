@@ -348,7 +348,7 @@ menuHammerMenuList = {
     ------------------------------------------------------------------------------------------------
     applicationMenu = {
         parentMenu = mainMenu,
-        menuHotkey = {{'cmd', 'alt', 'ctrl'}, 'a'},
+        menuHotkey = nil,
         menuItems = {
             {cons.cat.action, '', 'A', "App Store", {
                 {cons.act.launcher, 'App Store'}
