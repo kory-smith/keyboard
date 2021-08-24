@@ -195,8 +195,8 @@ if hs.host.localizedName() == "OF014X1C3UJG5JI" then
         }},
         {cons.cat.action, '', 'V', "Enable VPN", {
             {cons.act.func, function() 
-                local pulse = hs.application.find("Pulse Secure")
-                pulse:selectMenuItem("Connect")
+                hs.application.launchOrFocus("Pulse Secure")
+                hs.application.get("Pulse Secure"):selectMenuItem("Connect")
                 end}
         }},
         {cons.cat.action, 'shift', 'V', "Disable VPN", {
