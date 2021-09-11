@@ -1,10 +1,5 @@
 local engageWithTunnel = function(connectOrDisconnect)
-    local _, status = hs.osascript.applescript([[
-        tell application "Tunnelblick"
-        get state of first configuration
-        end tell
-        ]])
-    if (connectOrDisconnect == "connect" and status == "EXITING") then
+    if (connectOrDisconnect == "connect") then
         hs.osascript.applescript([[
             tell application "Tunnelblick"
             get name of first configuration
@@ -16,7 +11,7 @@ local engageWithTunnel = function(connectOrDisconnect)
           end tell
         ]])
     end
-    if (connectOrDisconnect == "disconnect" and status == "CONNECTED") then
+    if (connectOrDisconnect == "disconnect") then
         hs.osascript.applescript([[
             tell application "Tunnelblick"
             get name of first configuration
