@@ -1,3 +1,5 @@
+isScreenLocked = false;
+
 local engageWithTunnel = function(connectOrDisconnect)
     if (connectOrDisconnect == "connect") then
         hs.osascript.applescript([[
@@ -21,7 +23,9 @@ local engageWithTunnel = function(connectOrDisconnect)
     end
 end
 
-local shouldConnecttoVPN = function()
+    if isScreenLocked then
+        return false
+    end
     local _, status = hs.osascript.applescript([[
         tell application "Tunnelblick"
         get state of first configuration
@@ -46,8 +50,15 @@ return {
     end)
     :start(),
 
-    wifiWatcher = hs.wifi.watcher.new(function()
-        if shouldConnecttoVPN() then
+    screenWatcher = hs.caffeinate.watcher.new(function(screenState)
+        if screenState == hs.caffeinate.watcher.screensDidUnlock then
+            isScreenLocked = false;
+        else if screenState == hs.caffeinate.watcher.screensDidLock then
+            isScreenLocked = true;
+            end
+        end
+    end) 
+    :start(),
             engageWithTunnel("connect")
         else
             engageWithTunnel("disconnect")
