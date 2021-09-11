@@ -703,7 +703,7 @@ menuHammerMenuList = {
             {cons.cat.action, '', 'X', "Mute/Unmute", {
                 {cons.act.mediakey, "mute"}
             }},
-            {cons.cat.action, '', 'S', "Play/Pause", {
+            {cons.cat.action, '', 'P', "Play/Pause", {
                 {cons.act.mediakey, "playpause"}
             }},
             {cons.cat.action, '', 'O', "Brightness Up", {
