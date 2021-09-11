@@ -3,6 +3,7 @@
 set -e
 
 which -s brew || (echo "Homebrew is required: http://brew.sh/" && exit 1)
+which -s git || (echo "Git is required" && exit 1)
 
 brew bundle check || brew bundle
 
@@ -20,6 +21,19 @@ fi
 ln -sfn $PWD/hammerspoon ~/.hammerspoon/keyboard
 ln -sfn $PWD/hammerspoon/Spoons ~/.hammerspoon/Spoons
 ln -sfn $PWD/hammerspoon/menuHammerCustomConfig.lua ~/.hammerspoon/menuHammerCustomConfig.lua
+
+# Get SpoonInstall ready
+mkdir -p ~/.hammerspoon/Spoons
+# Delete the /tmp/Spoons directory if it already exists for whatever reason
+[ -d "/tmp/Spoons" ] && rm -rf /tmp/Spoons
+git clone https://github.com/Hammerspoon/Spoons.git /tmp/Spoons
+unzip /tmp/Spoons/Spoons/SpoonInstall.spoon.zip -d /tmp/Spoons/Spoons
+cp -R /tmp/Spoons/Spoons/SpoonInstall.spoon ~/.hammerspoon/Spoons
+
+# Get MenuHammer ready
+[ -d "/tmp/MenuHammer" ] && rm -rf /tmp/MenuHammer
+git clone https://github.com/kory-smith/MenuHammer /tmp/MenuHammer
+cp -R /tmp/MenuHammer/Spoons/MenuHammer.Spoon ~/.hammerspoon/Spoons
 
 # Prepare custom settings for navigating between words in iTerm2
 # grep -sq forward-word ~/.inputrc || cat $PWD/inputrc >> ~/.inputrc
