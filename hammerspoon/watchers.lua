@@ -59,6 +59,9 @@ return {
         end
     end) 
     :start(),
+
+    wifiWatcher = hs.wifi.watcher.new(function()
+        if shouldConnectToVPN() then
             engageWithTunnel("connect")
         else
             engageWithTunnel("disconnect")
