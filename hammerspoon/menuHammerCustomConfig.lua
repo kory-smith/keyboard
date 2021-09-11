@@ -231,6 +231,9 @@ local utilitiesMenu = "utilitiesMenu"
 -- Browser menus
 local browserMenu = "browserMenu"
 
+-- Bookmark menus
+local bookmarkMenu = "bookmarkMenu"
+
 -- Documents menu
 local documentsMenu = "documentsMenu"
 
@@ -284,9 +287,9 @@ menuHammerMenuList = {
             -- {cons.cat.submenu, '', 'A', 'Applications', {
             --     {cons.act.menu, applicationMenu}
             -- }},
-            -- {cons.cat.submenu, '', 'B', 'Browser', {
-            --     {cons.act.menu, browserMenu}
-            -- }},
+            {cons.cat.submenu, '', 'B', 'Bookmarks', {
+                {cons.act.menu, bookmarkMenu}
+            }},
             {cons.cat.submenu, '', 'D', 'Documents', {
                  {cons.act.menu, documentsMenu}
             }},
@@ -457,6 +460,44 @@ menuHammerMenuList = {
             }},
         }
     },
+
+    ------------------------------------------------------------------------------------------------
+    -- Bookmark Menu
+    ------------------------------------------------------------------------------------------------
+    bookmarkMenu = {
+        parentMenu = mainMenu,
+        meunHotkey = nil,
+        menuItems = {
+            {cons.cat.action, '', 'G', "Goodreads", {
+                {cons.act.openurl, "https://www.goodreads.com/" },
+            }},
+            {cons.cat.action, '', 'H', "MyChart", {
+                {cons.act.openurl, "https://chpepiceweb.health-partners.org/MyChart/Authentication/Login?" },
+            }},
+            {cons.cat.action, '', 'J', "Jira", {
+                {cons.act.openurl, "https://jira.kroger.com/jira/secure/RapidBoard.jspa?rapidView=7037" },
+            }},
+            {cons.cat.action, '', 'K', "Kroger", {
+                {cons.act.openurl, "http://kroger.com/" },
+            }},
+            {cons.cat.action, '', 'L', "Shopping list", {
+                {cons.act.openurl, "https://www.copymethat.com/shopping_list/" },
+            }},
+            {cons.cat.action, '', 'M', "MyFitnessPal", {
+                {cons.act.openurl, "https://myfitnesspal.com/" },
+            }},
+            {cons.cat.action, '', 'R', "Reddit", {
+                {cons.act.openurl, "https://old.reddit.com/" },
+            }},
+            {cons.cat.action, '', 'S', "Search Console", {
+                {cons.act.openurl, "https://search.google.com/u/1/search-console?resource_id=https://www.kroger.com/&hl=en" },
+            }},
+            {cons.cat.action, '', 'Y', "Yext", {
+                {cons.act.openurl, "https://www.yext.com/users/login?b=1029251&c=%2Fs%2F1029251%2Fentities%3FentityGroupId%3D0" },
+            }},
+        }
+    },
+
 
     ------------------------------------------------------------------------------------------------
     -- Documents Menu
