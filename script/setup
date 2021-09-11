@@ -19,7 +19,6 @@ if ! grep -sq "require('keyboard')" ~/.hammerspoon/init.lua; then
   echo "require('keyboard') -- Load Hammerspoon bits from https://github.com/kory-smith/keyboard" >> ~/.hammerspoon/init.lua
 fi
 ln -sfn $PWD/hammerspoon ~/.hammerspoon/keyboard
-ln -sfn $PWD/hammerspoon/Spoons ~/.hammerspoon/Spoons
 ln -sfn $PWD/hammerspoon/menuHammerCustomConfig.lua ~/.hammerspoon/menuHammerCustomConfig.lua
 
 # Get SpoonInstall ready
