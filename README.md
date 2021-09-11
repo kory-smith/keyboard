@@ -62,7 +62,7 @@ By repurposing the anachronistic <kbd>caps lock</kbd> key, we can make <kbd>cont
 - Tap <kbd>caps lock</kbd> for <kbd>escape</kbd>
 - Hold <kbd>caps lock</kbd> for <kbd>control</kbd>
 
-📣 Shout-out to [@arbelt](https://github.com/arbelt) and [@jasoncodes](https://github.com/jasoncodes) for [the implementation](https://github.com/jasonrudolph/keyboard/commit/01a7a5bd8a1e521756d1ec34769119ead5eee0b3). ⚡️🍻🌟
+📣 Shout-out to [@arbelt](https://github.com/arbelt) and [@jasoncodes](https://github.com/jasoncodes) for [the implementation](https://github.com/kory-smith/keyboard/commit/01a7a5bd8a1e521756d1ec34769119ead5eee0b3). ⚡️🍻🌟
 
 ### (S)uper (D)uper Mode
 
