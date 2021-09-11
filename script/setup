@@ -22,7 +22,7 @@ ln -sfn $PWD/hammerspoon/Spoons ~/.hammerspoon/Spoons
 ln -sfn $PWD/hammerspoon/menuHammerCustomConfig.lua ~/.hammerspoon/menuHammerCustomConfig.lua
 
 # Prepare custom settings for navigating between words in iTerm2
-grep -sq forward-word ~/.inputrc || cat $PWD/inputrc >> ~/.inputrc
+# grep -sq forward-word ~/.inputrc || cat $PWD/inputrc >> ~/.inputrc
 
 # Disable Dock icon for Hammerspoon
 defaults write org.hammerspoon.Hammerspoon MJShowDockIconKey -bool FALSE
