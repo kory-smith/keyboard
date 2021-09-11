@@ -468,11 +468,14 @@ menuHammerMenuList = {
         parentMenu = mainMenu,
         meunHotkey = nil,
         menuItems = {
+            {cons.cat.action, '', 'C', "MyChart", {
+                {cons.act.openurl, "https://chpepiceweb.health-partners.org/MyChart/Authentication/Login?" },
+            }},
             {cons.cat.action, '', 'G', "Goodreads", {
                 {cons.act.openurl, "https://www.goodreads.com/" },
             }},
-            {cons.cat.action, '', 'H', "MyChart", {
-                {cons.act.openurl, "https://chpepiceweb.health-partners.org/MyChart/Authentication/Login?" },
+            {cons.cat.action, '', 'H', "HomeAssistant", {
+                {cons.act.openurl, "http://homeassistant.local:8123/" },
             }},
             {cons.cat.action, '', 'J', "Jira", {
                 {cons.act.openurl, "https://jira.kroger.com/jira/secure/RapidBoard.jspa?rapidView=7037" },
