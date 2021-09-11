@@ -23,6 +23,7 @@ local engageWithTunnel = function(connectOrDisconnect)
     end
 end
 
+local shouldConnectToVPN = function()
     if isScreenLocked then
         return false
     end
@@ -33,10 +34,22 @@ end
         ]])
     local isAtTrustedPlace = 
         (hs.wifi.currentNetwork() == "Pie-fi-5G" or
+        hs.wifi.currentNetwork() == "Pie-fi" or
         hs.wifi.currentNetwork() == "Platypus Cave 5G" or
-        hs.wifi.currentNetwork() == "Pie-fi")
+        hs.wifi.currentNetwork() == nil)
     local isWifiEnabled = hs.network.interfaceDetails() ~= "nil"
-    return not (isAtTrustedPlace and isWifiEnabled and status == "CONNECTED")
+    local shouldConnect = ((not isAtTrustedPlace) and 
+                           isWifiEnabled and 
+                           (not isScreenLocked) and 
+                           (status == "EXITING" or status == "CONNECTED")
+                          )
+    -- print("\n\nScreen is locked?:", isScreenLocked, "\n\n")
+    -- print("\n\nvpnStatus:", status, "\n\n")
+    -- print("\n\nisAtTrustedPlace?:", isAtTrustedPlace, "\n\n")
+    -- print("\n\ncurrent network:", hs.wifi.currentNetwork(), "\n\n")
+    -- print("\n\nwifi is enabled?:", isWifiEnabled, "\n\n")
+    -- print("\n\nShould connect:", shouldConnect, "\n\n")
+    return shouldConnect
 end
 
 return {
