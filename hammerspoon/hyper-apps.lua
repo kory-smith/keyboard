@@ -8,6 +8,7 @@ local bindingsList = {
   { 'e', 'Visual Studio Code' },      -- "E" for "editor"
   { 'f', 'Finder' },                  -- "F" for "Finder"
   { 'g', 'Fork' },                    -- "G" for "Git GUI"
+  { 'j', 'Join' },                    -- "J" for "Join"
   { 'n', 'Notion' },                  -- "N" for "Notion"
   { 't', 'Todoist'},                  -- "T" for "Todoist"
   { 'y', 'YNAB' },                    -- "Y" for "YNAB"
@@ -34,7 +35,6 @@ local workBindings = {
   { 'b', 'Google Chrome' },             -- "B" for "Browser"
   { 'c', 'Microsoft Teams' },           -- "C" for "Chat"
   { 'm', 'Microsoft Outlook' },         -- "M" for "eMail"
-  { 'p', 'Join' },             
   { 't', 'Todoist'},
   { 'x', 'Microsoft Excel' },           -- "x" for "Excel"
   { 'z', 'zoom.us' },                   -- "Z" for "Zoom"
