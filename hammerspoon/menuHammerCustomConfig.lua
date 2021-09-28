@@ -474,20 +474,17 @@ menuHammerMenuList = {
         parentMenu = mainMenu,
         meunHotkey = nil,
         menuItems = {
+            {cons.cat.action, '', 'B', "Goodreads", {
+                {cons.act.openurl, "https://www.goodreads.com/" },
+            }},
             {cons.cat.action, '', 'C', "MyChart", {
                 {cons.act.openurl, "https://chpepiceweb.health-partners.org/MyChart/Authentication/Login?" },
             }},
-            {cons.cat.action, '', 'G', "Goodreads", {
-                {cons.act.openurl, "https://www.goodreads.com/" },
+            {cons.cat.action, '', 'G', "GitHub", {
+                {cons.act.openurl, "https://github.com/" },
             }},
             {cons.cat.action, '', 'H', "HomeAssistant", {
                 {cons.act.openurl, "http://homeassistant.local:8123/" },
-            }},
-            {cons.cat.action, '', 'J', "Jira", {
-                {cons.act.openurl, "https://jira.kroger.com/jira/secure/RapidBoard.jspa?rapidView=7037" },
-            }},
-            {cons.cat.action, '', 'K', "Kroger", {
-                {cons.act.openurl, "http://kroger.com/" },
             }},
             {cons.cat.action, '', 'L', "Shopping list", {
                 {cons.act.openurl, "https://www.copymethat.com/shopping_list/" },
@@ -497,12 +494,6 @@ menuHammerMenuList = {
             }},
             {cons.cat.action, '', 'R', "Reddit", {
                 {cons.act.openurl, "https://old.reddit.com/" },
-            }},
-            {cons.cat.action, '', 'S', "Search Console", {
-                {cons.act.openurl, "https://search.google.com/u/1/search-console?resource_id=https://www.kroger.com/&hl=en" },
-            }},
-            {cons.cat.action, '', 'Y', "Yext", {
-                {cons.act.openurl, "https://www.yext.com/users/login?b=1029251&c=%2Fs%2F1029251%2Fentities%3FentityGroupId%3D0" },
             }},
         }
     },
