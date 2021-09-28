@@ -234,6 +234,9 @@ local browserMenu = "browserMenu"
 -- Bookmark menus
 local bookmarkMenu = "bookmarkMenu"
 
+-- Bookmark menus
+local workBookmarkMenu = "workBookmarkMenu"
+
 -- Documents menu
 local documentsMenu = "documentsMenu"
 
@@ -316,6 +319,9 @@ menuHammerMenuList = {
             }},
             {cons.cat.submenu, '', 'T', 'Toggles', {
                  {cons.act.menu, toggleMenu}
+            }},
+            {cons.cat.submenu, '', 'W', 'Work Bookmarks', {
+                {cons.act.menu, workBookmarkMenu}
             }},
             -- {cons.cat.submenu, '', 'X', 'Text', {
             --      {cons.act.menu, textMenu}
@@ -500,6 +506,29 @@ menuHammerMenuList = {
             }},
         }
     },
+
+    ------------------------------------------------------------------------------------------------
+    -- Work Bookmark Menu
+    ------------------------------------------------------------------------------------------------
+    workBookmarkMenu = {
+        parentMenu = mainMenu,
+        meunHotkey = nil,
+        menuItems = {
+            {cons.cat.action, '', 'J', "Jira", {
+                {cons.act.openurl, "https://jira.kroger.com/jira/secure/RapidBoard.jspa?rapidView=7037" },
+            }},
+            {cons.cat.action, '', 'K', "Kroger", {
+                {cons.act.openurl, "https://www.kroger.com/" },
+            }},
+            {cons.cat.action, '', 'S', "Search Console", {
+                {cons.act.openurl, "https://search.google.com/u/1/search-console?resource_id=https://www.kroger.com/&hl=en" },
+            }},
+            {cons.cat.action, '', 'Y', "Yext", {
+                {cons.act.openurl, "https://www.yext.com/users/login?b=1029251&c=%2Fs%2F1029251%2Fentities%3FentityGroupId%3D0" },
+            }},
+        }
+    },
+
 
 
     ------------------------------------------------------------------------------------------------
