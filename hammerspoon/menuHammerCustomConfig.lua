@@ -515,7 +515,7 @@ menuHammerMenuList = {
                 {cons.act.openurl, "https://search.google.com/u/1/search-console?resource_id=https://www.kroger.com/&hl=en" },
             }},
             {cons.cat.action, '', 'Y', "Yext", {
-                {cons.act.openurl, "https://www.yext.com/users/login?b=1029251&c=%2Fs%2F1029251%2Fentities%3FentityGroupId%3D0" },
+                {cons.act.openurl, "https://www.yext.com/s/1029251/entities2" },
             }},
         }
     },
