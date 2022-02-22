@@ -71,14 +71,14 @@ return {
             end
         end
     end) 
-    :start(),
+    :start()
 
-    wifiWatcher = hs.wifi.watcher.new(function()
-        if shouldConnectToVPN() then
-            engageWithTunnel("connect")
-        else
-            engageWithTunnel("disconnect")
-        end
-    end)
+    -- wifiWatcher = hs.wifi.watcher.new(function()
+    --     if shouldConnectToVPN() then
+    --         engageWithTunnel("connect")
+    --     else
+    --         engageWithTunnel("disconnect")
+    --     end
+    -- end)
     :start()
 }
