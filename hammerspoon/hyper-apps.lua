@@ -14,6 +14,7 @@ local bindingsList = {
   { 'o', 'Obsidian' },                -- "O" for "Obsidian"
   { 't', 'Todoist'},                  -- "T" for "Todoist"
   { 'y', 'YNAB' },                    -- "Y" for "YNAB"
+  { 'z', 'zoom.us' },                   -- "Z" for "Zoom"
   { 'return', 'iTerm' },
 }
 
@@ -39,7 +40,6 @@ local workBindings = {
   { 'm', 'Microsoft Outlook' },         -- "M" for "eMail"
   { 't', 'Todoist'},
   { 'x', 'Microsoft Excel' },           -- "x" for "Excel"
-  { 'z', 'zoom.us' },                   -- "Z" for "Zoom"
 }
 
 -- Work computer name
