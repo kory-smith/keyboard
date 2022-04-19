@@ -16,6 +16,7 @@ local bindingsList = {
   { 'y', 'YNAB' },                    -- "Y" for "YNAB"
   { 'z', 'zoom.us' },                   -- "Z" for "Zoom"
   { 'p', 'Dashlane' },                -- "P" for "Password manager"
+  { 's', 'Pushbullet' },              -- "S" for "SMS client"
   { 'return', 'iTerm' },
 }
 
