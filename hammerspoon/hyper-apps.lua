@@ -4,6 +4,10 @@
 -- this file, save it as `hyper-apps.lua`, and edit the table below to configure
 -- your preferred shortcuts.
 
+-- This enables directional vim-like movement. Taken from https://www.hammerspoon.org/docs/hs.window.filter.html#focusWindowEast
+local windowFilter = hs.window.filter.new()
+windowFilter:setCurrentSpace(true)
+
 local bindingsList = {
   { 'd', 'Discord' },                 -- "D" for "Discord"
   { 'e', 'Visual Studio Code' },      -- "E" for "editor"
@@ -16,6 +20,23 @@ local bindingsList = {
   { 'z', 'zoom.us' },                   -- "Z" for "Zoom"
   { 's', 'Pushbullet' },              -- "S" for "SMS client"
   { 'return', 'iTerm' },
+  -- Vim-like hjkl keys to move focus from windows directionally
+  { 'h', function()
+          windowFilter:focusWindowWest(nil, true)
+         end
+  },
+  { 'j', function()
+          windowFilter:focusWindowSouth(nil, true)
+         end
+  },
+  { 'k', function()
+          windowFilter:focusWindowNorth(nil, true)
+         end
+  },
+  { 'l', function()
+          windowFilter:focusWindowEast(nil, true)
+         end
+  },
 }
 
 local personalBindings = {
