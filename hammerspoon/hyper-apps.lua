@@ -14,14 +14,13 @@ local bindingsList = {
   { 't', 'Todoist'},                  -- "T" for "Todoist"
   { 'y', 'YNAB' },                    -- "Y" for "YNAB"
   { 'z', 'zoom.us' },                   -- "Z" for "Zoom"
-  { 'p', 'Dashlane' },                -- "P" for "Password manager"
   { 's', 'Pushbullet' },              -- "S" for "SMS client"
   { 'return', 'iTerm' },
 }
 
 local personalBindings = {
   { 'b', 'Brave Browser' },           -- "B" for "Browser"
-  {'x', function()
+  { 'p', 'Dashlane' },                -- "P" for "Password manager"
     if hs.application.get("OpenOffice") then
         hs.application.launchOrFocus("OpenOffice")
     else
