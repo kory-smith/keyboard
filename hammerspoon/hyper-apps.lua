@@ -36,7 +36,6 @@ local workBindings = {
   { 'b', 'Google Chrome' },             -- "B" for "Browser"
   { 'c', 'Microsoft Teams' },           -- "C" for "Chat"
   { 'm', 'Microsoft Outlook' },         -- "M" for "eMail"
-  { 't', 'Todoist'},
   { 'x', 'Microsoft Excel' },           -- "x" for "Excel"
 }
 
