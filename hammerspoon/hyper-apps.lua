@@ -21,6 +21,7 @@ local bindingsList = {
 local personalBindings = {
   { 'b', 'Brave Browser' },           -- "B" for "Browser"
   { 'p', 'Dashlane' },                -- "P" for "Password manager"
+  { 'x', function()
     if hs.application.get("OpenOffice") then
         hs.application.launchOrFocus("OpenOffice")
     else
