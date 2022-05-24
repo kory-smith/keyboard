@@ -40,8 +40,8 @@ local workBindings = {
   { 'x', 'Microsoft Excel' },           -- "x" for "Excel"
 }
 
--- Work computer name
-if hs.host.localizedName() == "OF014X1C3UJG5JI" then
+local workComputerName = "OF014X1C3UJG5JI"
+if hs.host.localizedName() == workComputerName then
   bindingsList = hs.fnutils.concat(bindingsList, workBindings)  
 else
   bindingsList = hs.fnutils.concat(bindingsList, personalBindings)  
