@@ -9,7 +9,6 @@ local bindingsList = {
   { 'e', 'Visual Studio Code' },      -- "E" for "editor"
   { 'f', 'Finder' },                  -- "F" for "Finder"
   { 'g', 'Fork' },                    -- "G" for "Git GUI"
-  { 'j', 'Join' },                    -- "J" for "Join"
   { 'n', 'Notion' },                  -- "N" for "Notion"
   { 'o', 'Obsidian' },                -- "O" for "Obsidian"
   { 't', 'Todoist'},                  -- "T" for "Todoist"
