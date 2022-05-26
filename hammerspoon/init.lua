@@ -18,6 +18,15 @@ hs.hotkey.bind({'ctrl'}, '`', nil, function()
     hs.reload()
 end)
 
+-- Hyper and Shyper ; replace cmd `
+hs.hotkey.bind({'ctrl', 'alt', 'cmd'}, ';', nil, function()
+    hs.eventtap.keyStroke("cmd", "`")
+end)
+
+hs.hotkey.bind({'ctrl', 'alt', 'cmd', 'shift'}, ';', nil, function()
+    hs.eventtap.keyStroke({"cmd", "shift"}, "`")
+end)
+
 keyUpDown = function(modifiers, key)
     -- Un-comment & reload config to log each keystroke that we're triggering
     -- log.d('Sending keystroke:', hs.inspect(modifiers), key)
