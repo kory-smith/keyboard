@@ -41,6 +41,7 @@ local bindingsList = {
 
 local personalBindings = {
   { 'b', 'Brave Browser' },           -- "B" for "Browser"
+  { 'c', 'Telegram' },                -- "C" for "chat application"
   { 'p', 'Dashlane' },                -- "P" for "Password manager"
   { 'x', function()
     if hs.application.get("OpenOffice") then
