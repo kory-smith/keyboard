@@ -505,14 +505,14 @@ menuHammerMenuList = {
         parentMenu = mainMenu,
         meunHotkey = nil,
         menuItems = {
+            {cons.cat.action, '', 'C', "Confluence", {
+                {cons.act.openurl, "https://confluence.kroger.com/confluence/pages/viewpage.action?pageId=256980944" },
+            }},
             {cons.cat.action, '', 'J', "Jira", {
-                {cons.act.openurl, "https://jira.kroger.com/jira/secure/RapidBoard.jspa?rapidView=7037" },
+                {cons.act.openurl, "https://jira.kroger.com/jira/secure/RapidBoard.jspa?rapidView=9337&view=detail" },
             }},
             {cons.cat.action, '', 'K', "Kroger", {
                 {cons.act.openurl, "https://www.kroger.com/" },
-            }},
-            {cons.cat.action, '', 'S', "Search Console", {
-                {cons.act.openurl, "https://search.google.com/u/1/search-console?resource_id=https://www.kroger.com/&hl=en" },
             }},
             {cons.cat.action, '', 'Y', "Yext", {
                 {cons.act.openurl, "https://www.yext.com/s/1029251/entities2" },
