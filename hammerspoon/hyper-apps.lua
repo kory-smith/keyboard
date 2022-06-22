@@ -19,6 +19,7 @@ local bindingsList = {
   { 'y', 'YNAB' },                    -- "Y" for "YNAB"
   { 'z', 'zoom.us' },                   -- "Z" for "Zoom"
   { 's', 'Pushbullet' },              -- "S" for "SMS client"
+  { 'x', 'Microsoft Excel' },           -- "x" for "Excel"
   { 'return', 'iTerm' },
   -- Vim-like hjkl keys to move focus from windows directionally
   { 'h', function()
@@ -43,23 +44,12 @@ local personalBindings = {
   { 'b', 'Brave Browser' },           -- "B" for "Browser"
   { 'c', 'Telegram' },                -- "C" for "chat application"
   { 'p', 'Dashlane' },                -- "P" for "Password manager"
-  { 'x', function()
-    if hs.application.get("OpenOffice") then
-        hs.application.launchOrFocus("OpenOffice")
-    else
-        hs.application.launchOrFocus("OpenOffice")
-        hs.timer.doAfter(1, function()
-            hs.eventtap.keyStroke(null, "s")
-        end)
-    end
-end},
 }
 
 local workBindings = {
   { 'b', 'Google Chrome' },             -- "B" for "Browser"
   { 'c', 'Microsoft Teams' },           -- "C" for "Chat"
   { 'm', 'Microsoft Outlook' },         -- "M" for "eMail"
-  { 'x', 'Microsoft Excel' },           -- "x" for "Excel"
 }
 
 local workComputerName = "OF014X1C3UJG5JI"
