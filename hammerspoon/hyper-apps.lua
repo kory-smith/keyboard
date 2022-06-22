@@ -15,11 +15,11 @@ local bindingsList = {
   { 'g', 'Fork' },                    -- "G" for "Git GUI"
   { 'n', 'Notion' },                  -- "N" for "Notion"
   { 'o', 'Obsidian' },                -- "O" for "Obsidian"
+  { 's', 'Pushbullet' },              -- "S" for "SMS client"
   { 't', 'Todoist'},                  -- "T" for "Todoist"
+  { 'x', 'Microsoft Excel' },           -- "x" for "Excel"
   { 'y', 'YNAB' },                    -- "Y" for "YNAB"
   { 'z', 'zoom.us' },                   -- "Z" for "Zoom"
-  { 's', 'Pushbullet' },              -- "S" for "SMS client"
-  { 'x', 'Microsoft Excel' },           -- "x" for "Excel"
   { 'return', 'iTerm' },
   -- Vim-like hjkl keys to move focus from windows directionally
   { 'h', function()
