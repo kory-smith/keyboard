@@ -195,15 +195,20 @@ if hs.host.localizedName() == "OF014X1C3UJG5JI" then
         }},
         {cons.cat.action, '', 'V', "Enable VPN", {
             {cons.act.func, function() 
-                hs.application.launchOrFocus("Pulse Secure")
-                hs.application.get("Pulse Secure"):selectMenuItem("Connect")
+                hs.application.launchOrFocus("Zscaler")
                 end}
         }},
         {cons.cat.action, 'shift', 'V', "Disable VPN", {
-            {cons.act.func, function() 
-                local pulse = hs.application.find("Pulse Secure")
-                pulse:selectMenuItem("Disconnect")
-                end}
+            {cons.act.func, function() hs.osascript.applescript([[
+                -- ignoring application responses
+                tell application "Keyboard Maestro Engine"
+                do script "553704FA-00EC-4478-98DD-4DBE0F15BD88"
+                -- or: do script "Kill Zscaler"
+                -- or: do script "553704FA-00EC-4478-98DD-4DBE0F15BD88" with parameter "Whatever"
+                end tell
+                -- end ignoring
+            ]])
+              end}
         }},
         {cons.cat.action, '', 'W', "Enable wi-fi", {
             {cons.act.func, function() hs.wifi.setPower(true) end }
