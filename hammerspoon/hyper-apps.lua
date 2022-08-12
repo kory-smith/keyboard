@@ -15,6 +15,7 @@ local bindingsList = {
   { 'g', 'Fork' },                    -- "G" for "Git GUI"
   { 'n', 'Notion' },                  -- "N" for "Notion"
   { 'o', 'Obsidian' },                -- "O" for "Obsidian"
+  { 'p', '1Password' },                -- "O" for "Password Manager"
   { 's', 'Pushbullet' },              -- "S" for "SMS client"
   { 't', 'Todoist'},                  -- "T" for "Todoist"
   { 'x', 'Microsoft Excel' },           -- "x" for "Excel"
@@ -43,7 +44,6 @@ local bindingsList = {
 local personalBindings = {
   { 'b', 'Brave Browser' },           -- "B" for "Browser"
   { 'c', 'Telegram' },                -- "C" for "chat application"
-  { 'p', 'Dashlane' },                -- "P" for "Password manager"
 }
 
 local workBindings = {
