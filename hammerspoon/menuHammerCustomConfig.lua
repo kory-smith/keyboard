@@ -810,7 +810,7 @@ menuHammerMenuList = {
             }},
             {cons.cat.action, '', 'C', "Clear notifications", {
                 {cons.act.func, function() 
-                    if hs.host.localizedName() == "Speedy" then
+                    if hs.host.localizedName() == "Giskard" then
                     hs.osascript.applescript([[
                         activate application "NotificationCenter"
                             tell application "System Events"
