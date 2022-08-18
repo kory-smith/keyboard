@@ -15,7 +15,7 @@ local bindingsList = {
   { 'g', 'Fork' },                    -- "G" for "Git GUI"
   { 'n', 'Notion' },                  -- "N" for "Notion"
   { 'o', 'Obsidian' },                -- "O" for "Obsidian"
-  { 'p', '1Password' },                -- "O" for "Password Manager"
+  { 'p', 'Dashlane' },                -- "P" for "Password Manager"
   { 's', 'Pushbullet' },              -- "S" for "SMS client"
   { 't', 'Todoist'},                  -- "T" for "Todoist"
   { 'x', 'Microsoft Excel' },           -- "x" for "Excel"
