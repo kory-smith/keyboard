@@ -26,7 +26,7 @@
 
 return {
   modifiers = {'ctrl', 'alt', 'cmd', 'shift'},
-  showHelp  = false,
+  showHelp  = true,
   trigger   = 's',
   mappings  = {
     { {},         'return', 'maximize' },
@@ -35,8 +35,8 @@ return {
     { {},         'j',      'down' },
     { {},         'k',      'up' },
     { {},         'l',      'right' },
-    { {'shift'},  'h',      'left40' },
-    { {'shift'},  'l',      'right60' },
+    { {'shift'},  'h',      'left75' },
+    { {'shift'},  'l',      'right75' },
     { {},         'i',      'upLeft' },
     { {},         'o',      'upRight' },
     { {},         ',',      'downLeft' },

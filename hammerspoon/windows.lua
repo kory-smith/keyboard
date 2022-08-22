@@ -160,14 +160,14 @@ end
 -- | HERE |          |
 -- |      |          |
 -- +-----------------+
-function window.left40(win)
+function window.left75(win)
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
 
   f.x = max.x
   f.y = max.y
-  f.w = max.w * 0.4
+  f.w = max.w * 0.75
   f.h = max.h
   win:setFrame(f)
 end
@@ -177,14 +177,14 @@ end
 -- |      |   HERE   |
 -- |      |          |
 -- +-----------------+
-function window.right60(win)
+function window.right75(win)
   local f = win:frame()
   local screen = win:screen()
   local max = screen:frame()
 
-  f.x = max.x + (max.w * 0.4)
+  f.x = max.x + (max.w * 0.25)
   f.y = max.y
-  f.w = max.w * 0.6
+  f.w = max.w * 0.75
   f.h = max.h
   win:setFrame(f)
 end
