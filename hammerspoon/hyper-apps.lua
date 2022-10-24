@@ -43,7 +43,6 @@ local bindingsList = {
 
 local personalBindings = {
   { 'b', 'Brave Browser' },           -- "B" for "Browser"
-  { 'c', 'Telegram' },                -- "C" for "chat application"
 }
 
 local workBindings = {
