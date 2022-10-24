@@ -16,7 +16,7 @@ local bindingsList = {
   { 'n', 'Notion' },                  -- "N" for "Notion"
   { 'o', 'Obsidian' },                -- "O" for "Obsidian"
   { 'p', 'Dashlane' },                -- "P" for "Password Manager"
-  { 's', 'Pushbullet' },              -- "S" for "SMS client"
+  { 's', 'Messages' },              -- "S" for "SMS client"
   { 't', 'Todoist'},                  -- "T" for "Todoist"
   { 'x', 'Microsoft Excel' },           -- "x" for "Excel"
   { 'y', 'YNAB' },                    -- "Y" for "YNAB"
