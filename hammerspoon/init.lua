@@ -62,7 +62,7 @@ require('keyboard.middle-click')
 require('keyboard.panes')
 require('keyboard.utils')
 require('keyboard.watchers')
-require('keyboard.windows')
+-- require('keyboard.windows')
 
 hs.notify.new({
     title = 'Hammerspoon',
