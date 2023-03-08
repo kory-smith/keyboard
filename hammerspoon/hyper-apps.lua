@@ -14,7 +14,7 @@ local bindingsList = {
   { 'f', 'Finder' },                  -- "F" for "Finder"
   { 'g', 'Fork' },                    -- "G" for "Git GUI"
   { 'n', 'Notion' },                  -- "N" for "Notion"
-  { 'o', 'Obsidian' },                -- "O" for "Obsidian"
+  { 'o', 'Spotify' },                -- "O" for "spOtify"
   { 'p', 'Dashlane' },                -- "P" for "Password Manager"
   { 's', 'Messages' },              -- "S" for "SMS client"
   { 't', 'Todoist'},                  -- "T" for "Todoist"
