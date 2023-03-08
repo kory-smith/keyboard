@@ -51,7 +51,7 @@ local workBindings = {
   { 'm', 'Microsoft Outlook' },         -- "M" for "eMail"
 }
 
-local workComputerName = "OF014X1C3UJG5JI"
+local workComputerName = "OF060D91LFYXMHG"
 if hs.host.localizedName() == workComputerName then
   bindingsList = hs.fnutils.concat(bindingsList, workBindings)  
 else

@@ -165,7 +165,7 @@ local dynamicToggleMenuItems = {
 }
 
 -- Work laptop toggle items
-if hs.host.localizedName() == "OF014X1C3UJG5JI" then
+if hs.host.localizedName() == "OF060D91LFYXMHG" then
     dynamicToggleMenuItems = {            
         {cons.cat.action, '', 'D', "Enable DND", {
             {cons.act.func, function() 
