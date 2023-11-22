@@ -9,20 +9,20 @@ local windowFilter = hs.window.filter.new()
 windowFilter:setCurrentSpace(true)
 
 local bindingsList = {
-  { 'd', 'Discord' },                 -- "D" for "Discord"
-  { 'e', 'Visual Studio Code' },      -- "E" for "editor"
-  { 'f', 'Finder' },                  -- "F" for "Finder"
-  { 'g', 'Fork' },                    -- "G" for "Git GUI"
-  { 'n', 'Notion' },                  -- "N" for "Notion"
-  { 'o', 'Spotify' },                -- "O" for "spOtify"
-  { 'p', 'Dashlane' },                -- "P" for "Password Manager"
-  { 'r', 'Miniflux' },                -- "R" for "Rss Reader"
-  { 's', 'Messages' },              -- "S" for "SMS client"
-  { 't', 'Todoist'},                  -- "T" for "Todoist"
-  { 'x', 'Microsoft Excel' },           -- "x" for "Excel"
-  { 'y', 'YNAB' },                    -- "Y" for "YNAB"
-  { 'z', 'zoom.us' },                   -- "Z" for "Zoom"
-  { 'return', 'iTerm' },
+  -- { 'd', 'Discord' },                 -- "D" for "Discord"
+  -- { 'e', 'Visual Studio Code' },      -- "E" for "editor"
+  -- { 'f', 'Finder' },                  -- "F" for "Finder"
+  -- { 'g', 'Fork' },                    -- "G" for "Git GUI"
+  -- { 'n', 'Notion' },                  -- "N" for "Notion"
+  -- { 'o', 'Spotify' },                -- "O" for "spOtify"
+  -- { 'p', 'Dashlane' },                -- "P" for "Password Manager"
+  -- { 'r', 'Miniflux' },                -- "R" for "Rss Reader"
+  -- { 's', 'Messages' },              -- "S" for "SMS client"
+  -- { 't', 'Todoist'},                  -- "T" for "Todoist"
+  -- { 'x', 'Microsoft Excel' },           -- "x" for "Excel"
+  -- { 'y', 'YNAB' },                    -- "Y" for "YNAB"
+  -- { 'z', 'zoom.us' },                   -- "Z" for "Zoom"
+  -- { 'return', 'iTerm' },
   -- Vim-like hjkl keys to move focus from windows directionally
   { 'h', function()
           windowFilter:focusWindowWest(nil, true)
@@ -42,21 +42,21 @@ local bindingsList = {
   },
 }
 
-local personalBindings = {
-  { 'b', 'Brave Browser' },           -- "B" for "Browser"
-}
+-- local personalBindings = {
+--   { 'b', 'Brave Browser' },           -- "B" for "Browser"
+-- }
 
-local workBindings = {
-  { 'b', 'Google Chrome' },             -- "B" for "Browser"
-  { 'c', 'Microsoft Teams' },           -- "C" for "Chat"
-  { 'm', 'Microsoft Outlook' },         -- "M" for "eMail"
-}
+-- local workBindings = {
+--   { 'b', 'Google Chrome' },             -- "B" for "Browser"
+--   { 'c', 'Microsoft Teams' },           -- "C" for "Chat"
+--   { 'm', 'Microsoft Outlook' },         -- "M" for "eMail"
+-- }
 
-local workComputerName = "OF060D91LFYXMHG"
-if hs.host.localizedName() == workComputerName then
-  bindingsList = hs.fnutils.concat(bindingsList, workBindings)  
-else
-  bindingsList = hs.fnutils.concat(bindingsList, personalBindings)  
-end
+-- local workComputerName = "OF060D91LFYXMHG"
+-- if hs.host.localizedName() == workComputerName then
+--   bindingsList = hs.fnutils.concat(bindingsList, workBindings)  
+-- else
+--   bindingsList = hs.fnutils.concat(bindingsList, personalBindings)  
+-- end
 
 return bindingsList
