@@ -14,6 +14,7 @@ local bindingsList = {
   { 'e', 'Visual Studio Code' },      -- "E" for "editor"
   { 'f', 'Finder' },                  -- "F" for "Finder"
   { 'g', 'Fork' },                    -- "G" for "Git GUI"
+  { 'i', 'Obsidian' },                    -- "I" for "obsIdian"
   { 'n', 'Notion' },                  -- "N" for "Notion"
   { 'o', 'Spotify' },                -- "O" for "spOtify"
   { 'p', 'Dashlane' },                -- "P" for "Password Manager"
@@ -47,7 +48,7 @@ local personalBindings = {
 }
 
 local workBindings = {
-  { 'c', 'Microsoft Teams' },           -- "C" for "Chat"
+  { 'c', 'Microsoft Teams classic' },           -- "C" for "Chat"
   { 'm', 'Microsoft Outlook' },         -- "M" for "eMail"
 }
 
