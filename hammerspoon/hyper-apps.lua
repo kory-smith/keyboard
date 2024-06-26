@@ -48,7 +48,7 @@ local personalBindings = {
 }
 
 local workBindings = {
-  { 'c', 'Microsoft Teams classic' },           -- "C" for "Chat"
+  { 'c', 'Microsoft Teams' },           -- "C" for "Chat"
   { 'm', 'Microsoft Outlook' },         -- "M" for "eMail"
 }
 
