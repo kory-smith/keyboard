@@ -58,7 +58,6 @@ end
 -- require('keyboard.control-escape')
 require('keyboard.hyper')
 require('keyboard.markdown')
-require('keyboard.middle-click')
 require('keyboard.panes')
 require('keyboard.utils')
 require('keyboard.watchers')
