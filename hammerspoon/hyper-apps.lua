@@ -24,7 +24,7 @@ local bindingsList = {
   { 'x', 'Microsoft Excel' },           -- "x" for "Excel"
   { 'y', 'YNAB' },                    -- "Y" for "YNAB"
   { 'z', 'zoom.us' },                   -- "Z" for "Zoom"
-  { 'return', 'iTerm' },
+  { 'return', 'ghostty' },
   -- Vim-like hjkl keys to move focus from windows directionally
   { 'h', function()
           windowFilter:focusWindowWest(nil, true)
