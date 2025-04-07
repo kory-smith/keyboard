@@ -11,7 +11,6 @@ windowFilter:setCurrentSpace(true)
 local bindingsList = {
   { 'b', 'Firefox' },                 -- "B" for "Browser"
   { 'd', 'Discord' },                 -- "D" for "Discord"
-  { 'e', 'Visual Studio Code' },      -- "E" for "editor"
   { 'f', 'Finder' },                  -- "F" for "Finder"
   { 'g', 'Fork' },                    -- "G" for "Git GUI"
   { 'i', 'Obsidian' },                    -- "I" for "obsIdian"
@@ -21,7 +20,6 @@ local bindingsList = {
   { 'r', 'Miniflux' },                -- "R" for "Rss Reader"
   { 's', 'Messages' },              -- "S" for "SMS client"
   { 't', 'Todoist'},                  -- "T" for "Todoist"
-  { 'x', 'Microsoft Excel' },           -- "x" for "Excel"
   { 'y', 'YNAB' },                    -- "Y" for "YNAB"
   { 'z', 'zoom.us' },                   -- "Z" for "Zoom"
   { 'return', 'ghostty' },
@@ -45,11 +43,15 @@ local bindingsList = {
 }
 
 local personalBindings = {
+    { 'x', 'LibreOffice' },           -- "x" for "Excel"
+    {"e", "Cursor"}                   -- "E" for "editor"
 }
 
 local workBindings = {
   { 'c', 'Microsoft Teams' },           -- "C" for "Chat"
+  { 'e', 'Visual Studio Code' },      -- "E" for "editor"
   { 'm', 'Microsoft Outlook' },         -- "M" for "eMail"
+  { 'x', 'Microsoft Excel' },           -- "x" for "Excel"
 }
 
 local workComputerName = "OF060D91LFYXMHG"
