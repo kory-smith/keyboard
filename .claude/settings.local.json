@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/kory/.keyboard/hammerspoon/**)",
+      "Read(//Users/kory/.keyboard/karabiner/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

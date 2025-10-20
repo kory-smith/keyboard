@@ -1,6 +1,28 @@
 #!/bin/sh
+#
+# Keyboard Setup Script
+#
+# This script sets up symlinks from system config directories to this git repo.
+# After running this script, editing files in this repo will immediately affect
+# your live keyboard configuration.
+#
+# IMPORTANT: Always run this script from the repo root directory:
+#   cd /Users/kory/Gits/keyboard && ./script/setup
+#
+# Symlinks created:
+#   ~/.config/karabiner -> [repo]/karabiner
+#   ~/.hammerspoon/keyboard -> [repo]/hammerspoon
+#   ~/.hammerspoon/menuHammerCustomConfig.lua -> [repo]/hammerspoon/menuHammerCustomConfig.lua
 
 set -e
+
+# Ensure script is run from the keyboard repo directory
+if [ ! -f "$PWD/script/setup" ]; then
+  echo "Error: This script must be run from the keyboard repo directory"
+  echo "Expected location: /Users/kory/Gits/keyboard"
+  echo "Current location: $PWD"
+  exit 1
+fi
 
 which -s brew || (echo "Homebrew is required: http://brew.sh/" && exit 1)
 which -s git || (echo "Git is required" && exit 1)

@@ -145,16 +145,25 @@ menuKeyItemSeparator = ": "
 ----------------------------------------- Kory's options ---------------------------------------------
 ----------------------------------------------------------------------------------------------------
 
--- Non-work laptop toggle items
-local dynamicToggleMenuItems = {            
-    {cons.cat.action, '', 'V', "Toggle VPN", {
-        {cons.act.func, function() 
-            local currentWindow = hs.application.frontmostApplication()
-            hs.inspect(print(currentWindow.name))
-            hs.application.launchOrFocus("Wireguard")
-            hs.eventtap.keyStroke("CMD", "T")
-            currentWindow:activate()
-        end}
+-- Toggle items
+local dynamicToggleMenuItems = {
+    {cons.cat.action, '', 'M', "Enable Mouse Mover", {
+        {cons.act.func, function()
+            mouseMode = 1
+            hs.timer.doWhile(
+                function() return mouseMode == 1 end,
+                function()
+                    hs.mouse.setRelativePosition({x = 15, y = 15})
+                    hs.mouse.setRelativePosition({x = 1050, y = 1005})
+                end,
+                1 -- interval in seconds
+            )
+       end},
+    }},
+    {cons.cat.action, 'Shift', 'M', "Disable Mouse Mover", {
+        {cons.act.func, function()
+            mouseMode = 0
+       end},
     }},
     {cons.cat.action, '', 'W', "Enable wi-fi", {
         {cons.act.func, function() hs.wifi.setPower(true) end }
@@ -163,61 +172,6 @@ local dynamicToggleMenuItems = {
         {cons.act.func, function() hs.wifi.setPower(false) end }
     }},
 }
-
--- Work laptop toggle items
-if hs.host.localizedName() == "OF060D91LFYXMHG" then
-    dynamicToggleMenuItems = {            
-        {cons.cat.action, '', 'D', "Enable DND", {
-            {cons.act.func, function() 
-                hs.alert.show("Do not disturb enabled")
-                hs.execute("~/bin/do-not-disturb on")
-                end}
-        }},
-        {cons.cat.action, 'Shift', 'D', "Disable DND", {
-            {cons.act.func, function() 
-                hs.alert.show("Do not disturb disabled")
-                hs.execute("~/bin/do-not-disturb off")
-           end}
-        }},
-        {cons.cat.action, '', 'M', "Enable Mouse Mover", {
-            {cons.act.func, function() 
-                mouseMode = 1
-                hs.timer.doWhile(function() return mouseMode == 1 end, function() 
-                    hs.mouse.setRelativePosition({x = 15, y = 15})
-                    hs.mouse.setRelativePosition({x = 1050, y = 1005})
-                end) 
-           end},
-        }},
-        {cons.cat.action, 'Shift', 'M', "Disable Mouse Mover", {
-            {cons.act.func, function() 
-                mouseMode = 0
-           end},
-        }},
-        {cons.cat.action, '', 'V', "Enable VPN", {
-            {cons.act.func, function() 
-                hs.application.launchOrFocus("Zscaler")
-                end}
-        }},
-        {cons.cat.action, 'shift', 'V', "Disable VPN", {
-            {cons.act.func, function() hs.osascript.applescript([[
-                -- ignoring application responses
-                tell application "Keyboard Maestro Engine"
-                do script "553704FA-00EC-4478-98DD-4DBE0F15BD88"
-                -- or: do script "Kill Zscaler"
-                -- or: do script "553704FA-00EC-4478-98DD-4DBE0F15BD88" with parameter "Whatever"
-                end tell
-                -- end ignoring
-            ]])
-              end}
-        }},
-        {cons.cat.action, '', 'W', "Enable wi-fi", {
-            {cons.act.func, function() hs.wifi.setPower(true) end }
-        }},
-        {cons.cat.action, 'shift', 'W', "Disable wi-fi", {
-            {cons.act.func, function() hs.wifi.setPower(false) end }
-        }},
-    } 
-end
 
 ----------------------------------------------------------------------------------------------------
 --------------------------------------- Default Menus ----------------------------------------------
