@@ -11,7 +11,7 @@ windowFilter:setCurrentSpace(true)
 local bindingsList = {
   { 'b', 'Firefox' },                 -- "B" for "Browser"
   { 'd', 'Discord' },                 -- "D" for "Discord"
-  {"e", 'Code'},                   -- "E" for "editor"
+  {"e", 'Visual Studio Code'},                   -- "E" for "editor"
   { 'f', 'Finder' },                  -- "F" for "Finder"
   { 'g', 'Fork' },                    -- "G" for "Git GUI"
   { 'i', 'Obsidian' },                    -- "I" for "obsIdian"
