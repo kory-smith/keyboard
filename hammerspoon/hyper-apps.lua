@@ -10,6 +10,7 @@ windowFilter:setCurrentSpace(true)
 
 local bindingsList = {
   { 'b', 'Firefox' },                 -- "B" for "Browser"
+  { 'c', 'Claude' },                 -- "C" for "Claude"
   { 'd', 'Discord' },                 -- "D" for "Discord"
   {"e", 'Visual Studio Code'},                   -- "E" for "editor"
   { 'f', 'Finder' },                  -- "F" for "Finder"
