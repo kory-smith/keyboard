@@ -14,7 +14,7 @@ local bindingsList = {
   { 'd', 'Discord' },                 -- "D" for "Discord"
   {"e", 'Visual Studio Code'},                   -- "E" for "editor"
   { 'f', 'Finder' },                  -- "F" for "Finder"
-  { 'g', 'Fork' },                    -- "G" for "Git GUI"
+  { 'g', 'ChatGPT' },                 -- "G" for "ChatGPT"
   { 'i', 'Obsidian' },                    -- "I" for "obsIdian"
   { 'n', 'Notion' },                  -- "N" for "Notion"
   { 'o', 'Spotify' },                -- "O" for "spOtify"
